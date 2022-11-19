@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 #endif
 
 /* Note: animations are called via the controller for both the character and capsule using animator null checks
@@ -109,7 +110,7 @@ namespace StarterAssets
         private const float _threshold = 0.01f;
 
         private bool _hasAnimator;
-
+        public bool falsee = true;
         private bool IsCurrentDeviceMouse
         {
             get
@@ -155,10 +156,22 @@ namespace StarterAssets
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Rizzik") )
+            {
+                JumpAndGravity();
+                GroundedCheck();
+                
+                Move();
+            }
+          
+        
+           
+         
 
-            //JumpAndGravity();
-            //GroundedCheck();
-            Move();
+
+
+
+
         }
 
         private void LateUpdate()
@@ -300,17 +313,17 @@ namespace StarterAssets
                 }
 
                 // Jump
-                if (_input.jump && _jumpTimeoutDelta <= 0.0f)
-                {
-                    // the square root of H * -2 * G = how much velocity needed to reach desired height
-                    _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
+                //if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+                //{
+                //    // the square root of H * -2 * G = how much velocity needed to reach desired height
+                //    _verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 
-                    // update animator if using character
-                    if (_hasAnimator)
-                    {
-                        _animator.SetBool(_animIDJump, true);
-                    }
-                }
+                //    // update animator if using character
+                //    if (_hasAnimator)
+                //    {
+                //        _animator.SetBool(_animIDJump, true);
+                //    }
+                //}
 
                 // jump timeout
                 if (_jumpTimeoutDelta >= 0.0f)
@@ -373,7 +386,11 @@ namespace StarterAssets
         {
             if (animationEvent.animatorClipInfo.weight > 0.5f)
             {
-               
+                if (FootstepAudioClips.Length > 0)
+                {
+                    //var index = Random.Range(0, FootstepAudioClips.Length);
+                    //AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.TransformPoint(_controller.center), FootstepAudioVolume);
+                }
             }
         }
 
