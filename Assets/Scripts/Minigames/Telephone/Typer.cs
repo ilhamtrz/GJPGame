@@ -25,8 +25,7 @@ public class Typer : MonoBehaviour
     public TextMeshProUGUI scoreP2Text;
     private int winner;
 
-    public float currentTime = 0f;
-    public float startingTime;
+    public float timeDuration;
     public TextMeshProUGUI timerText;
     private float timer;
 
@@ -35,6 +34,7 @@ public class Typer : MonoBehaviour
     public TextMeshProUGUI winnerText;
 
     public AudioSource bgm;
+    public AudioSource introBgm;
 
     public bool startPlaying;
 
@@ -76,7 +76,7 @@ public class Typer : MonoBehaviour
         scoreP1 = 0;
         scoreP2 = 0;
         player1Turn = true;
-        timer = 10f;
+        timer = timeDuration;
     }
 
     // Update is called once per frame
@@ -106,6 +106,8 @@ public class Typer : MonoBehaviour
 
                 howToPlayPanel.SetActive(false);
 
+                introBgm.Stop();
+
                 bgm.Play();
 
                 
@@ -129,7 +131,7 @@ public class Typer : MonoBehaviour
                 {
                     endGame();
                 }
-                timer = 10f;
+                timer = timeDuration;
             }
         }
 
@@ -164,7 +166,6 @@ public class Typer : MonoBehaviour
                 
             }
                 
-
         }
     }
 
