@@ -8,8 +8,10 @@ public class Typer : MonoBehaviour
 {
     public TextMeshProUGUI numberOutput = null;
 
+    public NumberBank numberBank = null;
+
     private string remainingNumber = string.Empty;
-    private string currentNumber = "082283422218";
+    private string currentNumber = string.Empty;
 
     private string keyPressed =string.Empty;
 
@@ -58,6 +60,7 @@ public class Typer : MonoBehaviour
     private void SetCurrentNumber()
     {
         //get bank number
+        currentNumber = numberBank.GetNumber();
         SetRemainingNumber(currentNumber);
     }
 
