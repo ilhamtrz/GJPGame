@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.15590133, g: 0.17833313, b: 0.19166875, a: 1}
+  m_IndirectSpecularColor: {r: 0.111446135, g: 0.111957714, b: 0.0918854, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1426,13 +1426,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: -0.018378453, y: 0.888261, z: -0.03567632, w: -0.4575826}
+  m_LocalRotation: {x: -0.006793449, y: -0.88887936, z: -0.013187469, w: 0.45790112}
   m_LocalPosition: {x: 0, y: 579, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -355.4, y: -125.49, z: 0}
+  m_LocalEulerAnglesHint: {x: -721.7, y: -125.49, z: 0}
 --- !u!1 &733583578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,7 +2227,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258192864}
   m_LocalRotation: {x: 0.6935905, y: 0, z: 0, w: 0.72036946}
-  m_LocalPosition: {x: 0.24, y: 4.31, z: -0.35}
+  m_LocalPosition: {x: 0.24, y: 4.58, z: -0.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2577362826029880683}
@@ -2245,10 +2245,10 @@ Light:
   m_Type: 0
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 3.4
-  m_Range: 4.96
-  m_SpotAngle: 69.9
-  m_InnerSpotAngle: 21.80208
+  m_Intensity: 22.2
+  m_Range: 12
+  m_SpotAngle: 72.22771
+  m_InnerSpotAngle: 24.129778
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -9909,6 +9909,7 @@ GameObject:
   - component: {fileID: 7630163655503148753}
   - component: {fileID: 7630163655503148752}
   - component: {fileID: 7511005182721542862}
+  - component: {fileID: 7630163655503148756}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -9916,6 +9917,39 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7630163655503148756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7630163655503148755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!4 &7630163655503148758
 Transform:
   m_ObjectHideFlags: 0

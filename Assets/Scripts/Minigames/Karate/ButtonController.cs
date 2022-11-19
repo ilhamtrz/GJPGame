@@ -9,6 +9,7 @@ public class ButtonController : MonoBehaviour
     private MeshRenderer MR;
     public Material defaultMaterial;
     public Material pressedMaterial;
+    public GameObject lightt;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +22,13 @@ public class ButtonController : MonoBehaviour
         if (Input.GetKeyDown(keyToPress))
         {
             MR.material = pressedMaterial;
+            lightt.SetActive(false);
+           
         }
         if (Input.GetKeyUp(keyToPress))
         {
             MR.material = defaultMaterial;
+            lightt.SetActive(true);
         }
     }
 }
