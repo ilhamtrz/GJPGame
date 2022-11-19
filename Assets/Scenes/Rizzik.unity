@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 78538120}
   - component: {fileID: 78538119}
   - component: {fileID: 78538118}
-  - component: {fileID: 78538117}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -143,20 +142,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &78538117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 78538116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5621b1da28da16b4d8f95550a0114765, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneToLoad: test
-  exitName: 
 --- !u!65 &78538118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -791,7 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5621b1da28da16b4d8f95550a0114765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: test
+  sceneToLoad: Karate_Minigame
   exitName: 
 --- !u!1 &421845500
 GameObject:
