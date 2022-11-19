@@ -15,6 +15,29 @@ public class Typer : MonoBehaviour
 
     private string keyPressed =string.Empty;
 
+    private bool player1Turn;
+    private bool player2Turn;
+    private int turn;
+
+    private int scoreP1;
+    private int scoreP2;
+    public TextMeshProUGUI scoreP1Text;
+    public TextMeshProUGUI scoreP2Text;
+    private int winner;
+
+    public float currentTime = 0f;
+    public float startingTime;
+    public TextMeshProUGUI timerText;
+    private float timer;
+
+    public GameObject howToPlayPanel;
+    public GameObject endGamePanel;
+    public TextMeshProUGUI winnerText;
+
+    public AudioSource bgm;
+
+    public bool startPlaying;
+
     public Button buttonDial0;
     public Button buttonDial1;
     public Button buttonDial2;
@@ -49,12 +72,70 @@ public class Typer : MonoBehaviour
         Button btn9 = buttonDial9.GetComponent<Button>();
         btn9.onClick.AddListener(Dial9);
         SetCurrentNumber();
+        turn = 1;
+        scoreP1 = 0;
+        scoreP2 = 0;
+        player1Turn = true;
+        timer = 10f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        CheckInput();
+        if (scoreP1 > scoreP2)
+        {
+            winner = 1;
+            winnerText.text = "Player 1 Wins!";
+        }
+        else if (scoreP1 == scoreP2)
+        {
+            winner = 0;
+            winnerText.text = "Draw!";
+        }
+        else
+        {
+            winner = 2;
+            winnerText.text = "Player 2 Wins!";
+        }
+
+        if (!startPlaying)
+        {
+            if (Input.anyKeyDown)
+            {
+                startPlaying = true;
+
+                howToPlayPanel.SetActive(false);
+
+                bgm.Play();
+
+                
+            }
+        }
+        else
+        {
+            CheckInput();
+            timer -= 1 * Time.deltaTime;
+            timerText.text = timer.ToString();
+            if (timer <= 0)
+            {
+                SetCurrentNumber();
+                turn++;
+                if (turn == 2)
+                {
+                    player2Turn = true;
+                    Debug.Log("turn:"+turn);
+                }
+                if (turn == 3)
+                {
+                    endGame();
+                }
+                timer = 10f;
+            }
+        }
+
+        scoreP1Text.text = scoreP1.ToString();
+        scoreP2Text.text = scoreP2.ToString();
+
     }
 
     private void SetCurrentNumber()
@@ -78,7 +159,12 @@ public class Typer : MonoBehaviour
 
 
             if (keyPressed.Length == 1)
+            {
                 EnterLetter(keyPressed);
+                
+            }
+                
+
         }
     }
 
@@ -87,6 +173,14 @@ public class Typer : MonoBehaviour
         if (IsCorrectLetter(typedLetter))
         {
             RemoveLetter();
+            if (turn == 1)
+            {
+                scoreP1++;
+            }
+            else if (turn == 2)
+            {
+                scoreP2++;
+            }
 
             if (IsWordCComplete())
             {
@@ -109,6 +203,14 @@ public class Typer : MonoBehaviour
     private bool IsWordCComplete()
     {
         return remainingNumber.Length == 0;
+    }
+
+
+    public void endGame()
+    {
+        bgm.Stop();
+        endGamePanel.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void Dial0()
