@@ -82,11 +82,16 @@ public class KarateGameManager : MonoBehaviour
             }
         }
     }
+    public void timeSlace()
+    {
+        Time.timeScale = 1;
+    }
     public void PreviousCall()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("Rizzik");
         PlayerPrefs.SetString("LastExitName", "test1");
-        Time.timeScale = 1;
+        
     }
 
     public void GhostHit()

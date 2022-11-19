@@ -135,6 +135,7 @@ namespace StarterAssets
 
         private void Start()
         {
+            Time.timeScale = 1;
             _cinemachineTargetYaw = CinemachineCameraTarget.transform.rotation.eulerAngles.y;
             
             _hasAnimator = TryGetComponent(out _animator);
