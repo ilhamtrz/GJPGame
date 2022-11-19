@@ -36,6 +36,8 @@ public class Typer : MonoBehaviour
     public AudioSource bgm;
     public AudioSource introBgm;
 
+    public ScoreOverallSO overallSO;
+
     public bool startPlaying;
 
     public Button buttonDial0;
@@ -86,16 +88,22 @@ public class Typer : MonoBehaviour
         {
             winner = 1;
             winnerText.text = "Player 1 Wins!";
+
+            overallSO.p1Score++;
         }
         else if (scoreP1 == scoreP2)
         {
             winner = 0;
             winnerText.text = "Draw!";
+            overallSO.p1Score++;
+            overallSO.p2Score++;
         }
         else
         {
             winner = 2;
             winnerText.text = "Player 2 Wins!";
+            overallSO.p2Score++;
+
         }
 
         if (!startPlaying)
