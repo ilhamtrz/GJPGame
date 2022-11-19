@@ -35,6 +35,18 @@ public class GhostObject : MonoBehaviour
                 {
                     KarateGameManager.instance.scoreP2++;
                 }
+                if(transform.position.x == -3)
+                {
+                    //play left punch animation
+                }
+                else if(transform.position.x == 0)
+                {
+                    //play middle punch animation
+                }
+                else if(transform.position.x == 3)
+                {
+                    //play right punch animation
+                }
             }
         }
     }
