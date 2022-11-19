@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class KarateGameManager : MonoBehaviour
@@ -13,12 +14,19 @@ public class KarateGameManager : MonoBehaviour
 
     public GameObject border;
     public GameObject howToPlayPanel;
+    public GameObject endGamePanel;
+    public TextMeshProUGUI winnerText;
 
     public AudioSource bgm;
 
     public bool startPlaying;
 
     public static KarateGameManager instance;
+
+    public float totalGhost;
+    public float ghostMissed;
+    public float ghostHitted;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +36,8 @@ public class KarateGameManager : MonoBehaviour
         startPlaying = false;
 
         instance = this;
+        totalGhost = FindObjectsOfType<GhostObject>().Length;
+        Debug.Log(totalGhost);
     }
 
     // Update is called once per frame
@@ -36,14 +46,17 @@ public class KarateGameManager : MonoBehaviour
         if (scoreP1 > scoreP2)
         {
             winner = 1;
+            winnerText.text = "Player 1 Wins!";
         }
         else if(scoreP1 == scoreP2)
         {
             winner = 0;
+            winnerText.text = "Draw!";
         }
         else
         {
             winner = 2;
+            winnerText.text = "Player 2 Wins!";
         }
 
         if (!startPlaying)
@@ -60,15 +73,34 @@ public class KarateGameManager : MonoBehaviour
                 bgm.Play();
             }
         }
+        if (ghostHitted + ghostMissed == totalGhost)
+        {
+            endGame();
+            if (Input.anyKeyDown)
+            {
+                //Go to Main Scene
+            }
+        }
     }
 
     public void GhostHit()
     {
-        Debug.Log("Ghost hit");
+        ghostHitted++;
+        Debug.Log("Ghost hit:" + ghostHitted);
+        
     }
 
     public void GhostMissed()
     {
-        Debug.Log("Ghost missed");
+        ghostMissed++;
+        Debug.Log("Ghost missed"+ ghostMissed);
+        
+    }
+
+    public void endGame()
+    {
+        bgm.Stop();
+        endGamePanel.SetActive(true);
+        Time.timeScale = 0;
     }
 }
