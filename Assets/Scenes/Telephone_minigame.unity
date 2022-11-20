@@ -3014,7 +3014,7 @@ MonoBehaviour:
   scoreP1Text2Wins: {fileID: 2004393360}
   scoreP2Text2Wins: {fileID: 629894462}
   timeDuration: 28
-  inBetweenDuration: 10
+  inBetweenDuration: 5
   timerText: {fileID: 1965526239}
   player2GetReady: {fileID: 1292638812}
   howToPlayPanel: {fileID: 411969559}
