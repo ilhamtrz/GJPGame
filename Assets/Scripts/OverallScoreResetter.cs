@@ -8,7 +8,12 @@ public class OverallScoreResetter : MonoBehaviour
 
     private void OnApplicationQuit()
     {
+        Reset();
+    }
+
+    private void Reset()
+    {
         scoreSO.p1Score = 0;
-        scoreSO.p2Score = 0;
+        scoreSO.p1Score = 0;
     }
 }
