@@ -7,7 +7,8 @@ public class SceneExit : MonoBehaviour
 {
     public string sceneToLoad;
     public string exitName;
-    private void OnTriggerEnter(Collider other)
+   
+    private void OnTriggerStay(Collider other)
     {
         if (Input.GetKey(KeyCode.C)) {
 
