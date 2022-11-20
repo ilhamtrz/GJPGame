@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,7 +29,11 @@ public class Typer : MonoBehaviour
 
     public GameObject howToPlayPanel;
     public GameObject endGamePanel;
-    public TextMeshProUGUI winnerText;
+    public GameObject player1WinsPanel;
+    public GameObject player2WinsPanel;
+    public GameObject drawPanel;
+
+    private bool endGameReached;
 
     public AudioSource bgm;
     public AudioSource introBgm;
@@ -79,6 +81,7 @@ public class Typer : MonoBehaviour
         scoreP2 = 0;
         player1Turn = true;
         timer = timeDuration;
+        endGameReached = false;
     }
 
     // Update is called once per frame
@@ -86,23 +89,35 @@ public class Typer : MonoBehaviour
     {
         if (scoreP1 > scoreP2)
         {
-            winner = 1;
-            winnerText.text = "Player 1 Wins!";
+            if (endGameReached)
+            {
+                winner = 1;
 
-            overallSO.p1Score++;
+                player1WinsPanel.SetActive(true);
+
+                overallSO.p1Score++;
+            }
         }
         else if (scoreP1 == scoreP2)
         {
-            winner = 0;
-            winnerText.text = "Draw!";
-            overallSO.p1Score++;
-            overallSO.p2Score++;
+            
+            if (endGameReached)
+            {
+                winner = 0;
+                drawPanel.SetActive(true);
+                overallSO.p1Score++;
+                overallSO.p2Score++;
+            }
+            
         }
         else
         {
-            winner = 2;
-            winnerText.text = "Player 2 Wins!";
-            overallSO.p2Score++;
+            if (endGameReached)
+            {
+                winner = 2;
+                player2WinsPanel.SetActive(true);
+                overallSO.p2Score++;
+            }
 
         }
 
@@ -217,6 +232,7 @@ public class Typer : MonoBehaviour
 
     public void endGame()
     {
+        endGameReached = true;
         bgm.Stop();
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
