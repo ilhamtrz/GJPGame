@@ -59,7 +59,7 @@ public class KarateGameManager : MonoBehaviour
             {
                 winner = 1;
                 P1WinIcon.SetActive(true);
-                overallSO.p1Score++;
+                
                 
             }
             
@@ -69,8 +69,6 @@ public class KarateGameManager : MonoBehaviour
             if (endGameReached)
             {
                 winner = 0;
-                overallSO.p1Score++;
-                overallSO.p2Score++;
                 endGamePanel.SetActive(false);
                 drawPanel.SetActive(true);
             }
@@ -82,7 +80,7 @@ public class KarateGameManager : MonoBehaviour
             {
                 winner = 2;
                 P2WinIcon.SetActive(true);
-                overallSO.p2Score++;
+                
             }
                 
         }
@@ -116,10 +114,19 @@ public class KarateGameManager : MonoBehaviour
     }
     public void PreviousCall()
     {
+        if (scoreP1 > scoreP2)
+        {
+            overallSO.p1Score++;
+        }
+        else if (scoreP2 > scoreP1)
+        {
+            overallSO.p2Score++;
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene("Rizzik");
         PlayerPrefs.SetString("LastExitName", "test1");
         
+
     }
 
     public void GhostHit()
@@ -144,5 +151,6 @@ public class KarateGameManager : MonoBehaviour
         bgm.Stop();
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
+        
     }
 }
