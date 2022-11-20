@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class KarateGameManager : MonoBehaviour
 {
     public int scoreP1;
@@ -78,9 +78,20 @@ public class KarateGameManager : MonoBehaviour
             endGame();
             if (Input.anyKeyDown)
             {
-                //Go to Main Scene
+                
             }
         }
+    }
+    public void timeSlace()
+    {
+        Time.timeScale = 1;
+    }
+    public void PreviousCall()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Rizzik");
+        PlayerPrefs.SetString("LastExitName", "test1");
+        
     }
 
     public void GhostHit()

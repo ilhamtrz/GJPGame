@@ -6,6 +6,7 @@ using UnityEngine;
 public class ScoreDisplay : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI scoreText2;
     public KarateGameManager GM;
     public int forPlayer;
     // Start is called before the first frame update
@@ -20,10 +21,13 @@ public class ScoreDisplay : MonoBehaviour
         if(forPlayer == 1)
         {
             scoreText.text = GM.scoreP1.ToString();
+            scoreText2.text = GM.scoreP1.ToString();
+
         }
         else
         {
             scoreText.text = GM.scoreP2.ToString();
+            scoreText2.text = GM.scoreP2.ToString();
         }
     }
 }
