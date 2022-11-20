@@ -10,6 +10,9 @@ public class GhostObject : MonoBehaviour
 
     public GameObject hitEffect;
     public GameObject missEffect;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,9 +55,11 @@ public class GhostObject : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
+        int random = Random.Range(0, 3);
         if(other.tag == "Activator")
         {
             canBePressed = true;
+            
         }
         if(other.tag == "MissBorder")
         {

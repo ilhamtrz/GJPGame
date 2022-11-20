@@ -8,6 +8,7 @@ public class KarateGameManager : MonoBehaviour
     public int scoreP1;
     public int scoreP2;
     public int winner;
+    public ScoreOverallSO overallSO;
 
     public GhostScroller GS1;
     public GhostScroller GS2;
@@ -15,7 +16,10 @@ public class KarateGameManager : MonoBehaviour
     public GameObject border;
     public GameObject howToPlayPanel;
     public GameObject endGamePanel;
-    public TextMeshProUGUI winnerText;
+    public GameObject drawPanel;
+
+    public GameObject P1WinIcon;
+    public GameObject P2WinIcon;
 
     public AudioSource bgm;
 
@@ -27,6 +31,10 @@ public class KarateGameManager : MonoBehaviour
     public float ghostMissed;
     public float ghostHitted;
 
+    public bool endGameReached;
+
+    public List<AudioSource> punchSfxList = new List<AudioSource>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +42,8 @@ public class KarateGameManager : MonoBehaviour
         scoreP2 = 0;
 
         startPlaying = false;
+
+        endGameReached = false;
 
         instance = this;
         totalGhost = FindObjectsOfType<GhostObject>().Length;
@@ -45,18 +55,36 @@ public class KarateGameManager : MonoBehaviour
     {
         if (scoreP1 > scoreP2)
         {
-            winner = 1;
-            winnerText.text = "Player 1 Wins!";
+            if (endGameReached)
+            {
+                winner = 1;
+                P1WinIcon.SetActive(true);
+                overallSO.p1Score++;
+                
+            }
+            
         }
         else if(scoreP1 == scoreP2)
         {
-            winner = 0;
-            winnerText.text = "Draw!";
+            if (endGameReached)
+            {
+                winner = 0;
+                overallSO.p1Score++;
+                overallSO.p2Score++;
+                endGamePanel.SetActive(false);
+                drawPanel.SetActive(true);
+            }
+                
         }
         else
         {
-            winner = 2;
-            winnerText.text = "Player 2 Wins!";
+            if (endGameReached)
+            {
+                winner = 2;
+                P2WinIcon.SetActive(true);
+                overallSO.p2Score++;
+            }
+                
         }
 
         if (!startPlaying)
@@ -96,9 +124,11 @@ public class KarateGameManager : MonoBehaviour
 
     public void GhostHit()
     {
+        int random = Random.Range(0, 3);
         ghostHitted++;
         Debug.Log("Ghost hit:" + ghostHitted);
-        
+        punchSfxList[random].Play();
+
     }
 
     public void GhostMissed()
@@ -110,6 +140,7 @@ public class KarateGameManager : MonoBehaviour
 
     public void endGame()
     {
+        endGameReached = true;
         bgm.Stop();
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
