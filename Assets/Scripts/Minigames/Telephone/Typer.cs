@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Typer : MonoBehaviour
 {
@@ -102,7 +103,12 @@ public class Typer : MonoBehaviour
         endGameReached = false;
         isInBetween = false;
     }
-
+    public void PreviousCall()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Rizzik");
+        PlayerPrefs.SetString("LastExitName", "test1");
+    }
     // Update is called once per frame
     void Update()
     {
@@ -113,7 +119,7 @@ public class Typer : MonoBehaviour
                 winner = 1;
 
                 player1WinsPanel.SetActive(true);
-
+                
                 overallSO.p1Score++;
             }
         }
@@ -122,6 +128,7 @@ public class Typer : MonoBehaviour
             
             if (endGameReached)
             {
+                
                 winner = 0;
                 drawPanel.SetActive(true);
                 overallSO.p1Score++;
@@ -133,6 +140,7 @@ public class Typer : MonoBehaviour
         {
             if (endGameReached)
             {
+                
                 winner = 2;
                 player2WinsPanel.SetActive(true);
                 overallSO.p2Score++;

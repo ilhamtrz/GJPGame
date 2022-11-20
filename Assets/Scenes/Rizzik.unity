@@ -3197,7 +3197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfae1a7cd6f1361498a397a86d37092f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastExitTime: Rizzik1
+  lastExitTime: Rizzik2
 --- !u!23 &1191858649
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3863,7 +3863,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5621b1da28da16b4d8f95550a0114765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Karate_Minigame
+  sceneToLoad: Telephone_minigame
   exitName: 
 --- !u!65 &1448704708
 BoxCollider:
