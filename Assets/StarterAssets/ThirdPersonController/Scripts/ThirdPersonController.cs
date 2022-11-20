@@ -178,6 +178,7 @@ namespace StarterAssets
         {
             if (other.gameObject.tag == "EXIT")
             {
+                PlayerPrefs.DeleteKey("LastExitName");
                 SceneManager.LoadScene("mainmenu");
             }
         }

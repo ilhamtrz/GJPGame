@@ -6,6 +6,10 @@ public class OverallScoreResetter : MonoBehaviour
 {
     public ScoreOverallSO scoreSO;
 
+    private void Start()
+    {
+        Reset();
+    }
     private void OnApplicationQuit()
     {
         Reset();
