@@ -33,9 +33,13 @@ public class Typer : MonoBehaviour
     private int winner;
 
     public float timeDuration;
+    public float inBetweenDuration;
     public TextMeshProUGUI timerText;
     private float timer;
+    private float inBetweenTimer;
+    private bool isInBetween;
 
+    public GameObject player2GetReady;
     public GameObject howToPlayPanel;
     public GameObject endGamePanel;
     public GameObject player1WinsPanel;
@@ -94,7 +98,9 @@ public class Typer : MonoBehaviour
         scoreP2 = 0;
         player1Turn = true;
         timer = timeDuration;
+        inBetweenTimer = inBetweenDuration;
         endGameReached = false;
+        isInBetween = false;
     }
 
     // Update is called once per frame
@@ -151,23 +157,38 @@ public class Typer : MonoBehaviour
         }
         else
         {
-            CheckInput();
-            timer -= 1 * Time.deltaTime;
-            timerText.text = timer.ToString();
-            if (timer <= 0)
+            if (!isInBetween)
             {
-                SetCurrentNumber();
-                turn++;
-                if (turn == 2)
+                CheckInput();
+                timer -= 1 * Time.deltaTime;
+                timerText.text = timer.ToString("0");
+                if (timer <= 0)
                 {
-                    player2Turn = true;
-                    Debug.Log("turn:"+turn);
+                    SetCurrentNumber();
+                    turn++;
+                    if (turn == 2)
+                    {
+                        player2Turn = true;
+                        Debug.Log("turn:" + turn);
+                        isInBetween = true;
+                    }
+                    if (turn == 3)
+                    {
+                        endGame();
+                    }
+                    timer = timeDuration;
                 }
-                if (turn == 3)
+            }
+            else
+            {
+                player2GetReady.SetActive(true);
+                inBetweenTimer -= 1 * Time.deltaTime;
+                if(inBetweenTimer <= 0)
                 {
-                    endGame();
+                    player2GetReady.SetActive(false);
+                    isInBetween = false;
+                    inBetweenTimer = inBetweenDuration;
                 }
-                timer = timeDuration;
             }
         }
 
