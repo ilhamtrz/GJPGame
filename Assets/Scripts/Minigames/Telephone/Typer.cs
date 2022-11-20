@@ -105,6 +105,14 @@ public class Typer : MonoBehaviour
     }
     public void PreviousCall()
     {
+        if (scoreP1 > scoreP2)
+        {
+            overallSO.p1Score++;
+        }
+        else if (scoreP2 > scoreP1)
+        {
+            overallSO.p2Score++;
+        }
         Time.timeScale = 1;
         SceneManager.LoadScene("Rizzik");
         PlayerPrefs.SetString("LastExitName", "test1");
@@ -119,8 +127,6 @@ public class Typer : MonoBehaviour
                 winner = 1;
 
                 player1WinsPanel.SetActive(true);
-                
-                overallSO.p1Score++;
             }
         }
         else if (scoreP1 == scoreP2)
@@ -131,8 +137,6 @@ public class Typer : MonoBehaviour
                 
                 winner = 0;
                 drawPanel.SetActive(true);
-                overallSO.p1Score++;
-                overallSO.p2Score++;
             }
             
         }
@@ -143,7 +147,6 @@ public class Typer : MonoBehaviour
                 
                 winner = 2;
                 player2WinsPanel.SetActive(true);
-                overallSO.p2Score++;
             }
 
         }
