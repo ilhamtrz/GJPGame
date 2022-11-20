@@ -174,7 +174,14 @@ namespace StarterAssets
 
 
         }
-
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.tag == "EXIT")
+            {
+                SceneManager.LoadScene("mainmenu");
+            }
+        }
+      
         private void LateUpdate()
         {
             CameraRotation();

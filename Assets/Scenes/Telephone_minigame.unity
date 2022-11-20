@@ -3013,7 +3013,7 @@ MonoBehaviour:
   scoreP2Text1Wins: {fileID: 210323898}
   scoreP1Text2Wins: {fileID: 2004393360}
   scoreP2Text2Wins: {fileID: 629894462}
-  timeDuration: 1
+  timeDuration: 20
   inBetweenDuration: 5
   timerText: {fileID: 1965526239}
   player2GetReady: {fileID: 1292638812}
@@ -8870,7 +8870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2119295853
 RectTransform:
   m_ObjectHideFlags: 0
