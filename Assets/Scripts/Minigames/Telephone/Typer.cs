@@ -21,6 +21,15 @@ public class Typer : MonoBehaviour
     private int scoreP2;
     public TextMeshProUGUI scoreP1Text;
     public TextMeshProUGUI scoreP2Text;
+
+    public TextMeshProUGUI scoreP1TextDraw;
+    public TextMeshProUGUI scoreP2TextDraw;
+
+    public TextMeshProUGUI scoreP1Text1Wins;
+    public TextMeshProUGUI scoreP2Text1Wins;
+
+    public TextMeshProUGUI scoreP1Text2Wins;
+    public TextMeshProUGUI scoreP2Text2Wins;
     private int winner;
 
     public float timeDuration;
@@ -37,6 +46,10 @@ public class Typer : MonoBehaviour
 
     public AudioSource bgm;
     public AudioSource introBgm;
+
+    public AudioSource dialPhone1Sfx;
+    public AudioSource dialPhone2Sfx;
+    public AudioSource dialPhone3Sfx;
 
     public ScoreOverallSO overallSO;
 
@@ -161,6 +174,15 @@ public class Typer : MonoBehaviour
         scoreP1Text.text = scoreP1.ToString();
         scoreP2Text.text = scoreP2.ToString();
 
+        scoreP1Text1Wins.text = scoreP1.ToString();
+        scoreP2Text1Wins.text = scoreP2.ToString();
+
+        scoreP1Text2Wins.text = scoreP1.ToString();
+        scoreP2Text2Wins.text = scoreP2.ToString();
+
+        scoreP1TextDraw.text = scoreP1.ToString();
+        scoreP2TextDraw.text = scoreP2.ToString();
+
     }
 
     private void SetCurrentNumber()
@@ -241,42 +263,52 @@ public class Typer : MonoBehaviour
     public void Dial0()
     {
         keyPressed = "0";
+        dialPhone2Sfx.Play();
     }
 
     public void Dial1()
     {
         keyPressed = "1";
+        dialPhone1Sfx.Play();
     }
     public void Dial2()
     {
         keyPressed = "2";
+        dialPhone1Sfx.Play();
     }
     public void Dial3()
     {
         keyPressed = "3";
+        dialPhone1Sfx.Play();
     }
     public void Dial4()
     {
         keyPressed = "4";
+        dialPhone2Sfx.Play();
     }
     public void Dial5()
     {
         keyPressed = "5";
+        dialPhone2Sfx.Play();
     }
     public void Dial6()
     {
         keyPressed = "6";
+        dialPhone2Sfx.Play();
     }
     public void Dial7()
     {
         keyPressed = "7";
+        dialPhone3Sfx.Play();
     }
     public void Dial8()
     {
         keyPressed = "8";
+        dialPhone3Sfx.Play();
     }
     public void Dial9()
     {
         keyPressed = "9";
+        dialPhone3Sfx.Play();
     }
 }
