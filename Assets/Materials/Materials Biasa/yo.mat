@@ -187,7 +187,7 @@ Material:
     - _DstBlend: 0
     - _EMISSIVE: 0
     - _EnvironmentReflections: 1
-    - _Farthest_Distance: 30
+    - _Farthest_Distance: 1000
     - _GI_Intensity: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -234,8 +234,8 @@ Material:
     - _OcclusionStrength: 1
     - _Offset_X_Axis_BLD: -0.05
     - _Offset_Y_Axis_BLD: 0.09
-    - _Offset_Z: 45.3
-    - _Outline_Width: 0.11
+    - _Offset_Z: 0
+    - _Outline_Width: 0.7
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
