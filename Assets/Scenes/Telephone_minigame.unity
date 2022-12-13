@@ -1317,7 +1317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &411969560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3147,40 +3147,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOutput: {fileID: 1223654344}
   numberBank: {fileID: 971395417}
-  scoreP1Text: {fileID: 1228504759}
-  scoreP2Text: {fileID: 1186630329}
-  scoreP1TextDraw: {fileID: 1436415111}
-  scoreP2TextDraw: {fileID: 1560979741}
-  scoreP1Text1Wins: {fileID: 1074059362}
-  scoreP2Text1Wins: {fileID: 210323898}
-  scoreP1Text2Wins: {fileID: 2004393360}
-  scoreP2Text2Wins: {fileID: 629894462}
+  keyPressed: 
+  scoreManager: {fileID: 923716792}
   timeDuration: 20
   inBetweenDuration: 5
-  timerText: {fileID: 1965526239}
-  player2GetReady: {fileID: 1292638812}
-  howToPlayPanel: {fileID: 411969559}
-  endGamePanel: {fileID: 2119295852}
-  player1WinsPanel: {fileID: 109573661}
-  player2WinsPanel: {fileID: 1267650082}
-  drawPanel: {fileID: 412242222}
+  panelManager: {fileID: 1044501654}
   bgm: {fileID: 787837273}
   introBgm: {fileID: 869107644}
-  dialPhone1Sfx: {fileID: 1439035416}
-  dialPhone2Sfx: {fileID: 419899425}
-  dialPhone3Sfx: {fileID: 1779628623}
   overallSO: {fileID: 11400000, guid: b57460157045bc043977e44c3411fa1d, type: 2}
-  startPlaying: 0
-  buttonDial0: {fileID: 1002161144}
-  buttonDial1: {fileID: 178714848}
-  buttonDial2: {fileID: 652638889}
-  buttonDial3: {fileID: 490025222}
-  buttonDial4: {fileID: 1548408343}
-  buttonDial5: {fileID: 476347678}
-  buttonDial6: {fileID: 408357327}
-  buttonDial7: {fileID: 2031864681}
-  buttonDial8: {fileID: 1897879804}
-  buttonDial9: {fileID: 435237280}
+--- !u!4 &773328580 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 588811918936587138, guid: 0ae5ea32aa2372c41a3d0d657a692ea5, type: 3}
+  m_PrefabInstance: {fileID: 4421736155598949321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &787837272
 GameObject:
   m_ObjectHideFlags: 0
@@ -3507,6 +3486,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881163810}
   m_CullTransparentMesh: 1
+--- !u!1 &923716790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 923716791}
+  - component: {fileID: 923716792}
+  m_Layer: 0
+  m_Name: ScoreManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &923716791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923716790}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 773328580}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &923716792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923716790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01abb3fe50338f54f940a33707292791, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreP1Text: {fileID: 1228504759}
+  scoreP2Text: {fileID: 1186630329}
+  scoreP1TextDraw: {fileID: 1436415111}
+  scoreP2TextDraw: {fileID: 1560979741}
+  scoreP1Text1Wins: {fileID: 1074059362}
+  scoreP2Text1Wins: {fileID: 210323898}
+  scoreP1Text2Wins: {fileID: 2004393360}
+  scoreP2Text2Wins: {fileID: 629894462}
+  timerText: {fileID: 1965526239}
 --- !u!1 &934337037
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,6 +4059,55 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!1 &1044501652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044501653}
+  - component: {fileID: 1044501654}
+  m_Layer: 0
+  m_Name: PanelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1044501653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044501652}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 773328580}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1044501654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044501652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d249a81eb766d41a84a1c80c99ad09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player2GetReady: {fileID: 1292638812}
+  howToPlayPanel: {fileID: 411969559}
+  endGamePanel: {fileID: 2119295852}
+  player1WinsPanel: {fileID: 109573661}
+  player2WinsPanel: {fileID: 1267650082}
+  drawPanel: {fileID: 412242222}
 --- !u!1 &1074059360
 GameObject:
   m_ObjectHideFlags: 0
@@ -5680,6 +5760,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1292638812}
   m_CullTransparentMesh: 1
+--- !u!1 &1311368229
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1311368230}
+  - component: {fileID: 1311368231}
+  m_Layer: 0
+  m_Name: ButtonManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1311368230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311368229}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 773328580}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1311368231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1311368229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80ff8af53deede4da9d27bbd997382d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typer: {fileID: 773328579}
+  dialPhone1Sfx: {fileID: 1439035416}
+  dialPhone2Sfx: {fileID: 419899425}
+  dialPhone3Sfx: {fileID: 1779628623}
+  buttonDial0: {fileID: 1002161144}
+  buttonDial1: {fileID: 178714848}
+  buttonDial2: {fileID: 652638889}
+  buttonDial3: {fileID: 490025222}
+  buttonDial4: {fileID: 1548408343}
+  buttonDial5: {fileID: 476347678}
+  buttonDial6: {fileID: 408357327}
+  buttonDial7: {fileID: 2031864681}
+  buttonDial8: {fileID: 1897879804}
+  buttonDial9: {fileID: 435237280}
 --- !u!1 &1365715615
 GameObject:
   m_ObjectHideFlags: 0
