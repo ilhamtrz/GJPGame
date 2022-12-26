@@ -5,7 +5,7 @@ using UnityEngine;
 public class GhostScroller : MonoBehaviour
 {
     public float beatTempo;
-    public bool hasStarted;
+    [HideInInspector] public bool hasStarted;
     public GameObject border;
     public GameObject howToPlayPanel;
     // Start is called before the first frame update
