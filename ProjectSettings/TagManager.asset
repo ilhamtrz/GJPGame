@@ -8,6 +8,8 @@ TagManager:
   - Activator
   - MissBorder
   - EXIT
+  - TargetBorder
+  - Target
   layers:
   - Default
   - TransparentFX
