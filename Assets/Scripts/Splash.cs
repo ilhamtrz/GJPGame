@@ -29,6 +29,6 @@ public class Splash : MonoBehaviour
 
     public void PindahScene()
     {
-        SceneManager.LoadScene("Rizzik");
+        SceneManager.LoadScene("gameplay_uji");
     }
 }
