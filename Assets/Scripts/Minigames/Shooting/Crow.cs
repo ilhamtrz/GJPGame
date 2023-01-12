@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TargetMover : MonoBehaviour
+public class Crow : MonoBehaviour
 {
     public float speed;
     public bool leftDirection;
-
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("TargetBorder"))
         {
             /*Destroy(gameObject);*/
             gameObject.SetActive(false);
-            Debug.Log("Collide with border");
+            Debug.Log("collide with border");
         }
     }
 
