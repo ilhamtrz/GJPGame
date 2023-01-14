@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: d33067a9e8dc5dd41a64858a3a1100ca, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -1009,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &218136592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1960,13 +1960,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448671756}
-  m_LocalRotation: {x: -0.96546495, y: 0.007994349, z: -0.2586955, w: -0.02983532}
+  m_LocalRotation: {x: -0.8541249, y: 0.12086952, z: -0.22886205, w: -0.45109126}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 536.46, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 484.32, y: -30, z: 0}
 --- !u!1 &468174635
 GameObject:
   m_ObjectHideFlags: 0
@@ -9859,15 +9859,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 816049613851605350, guid: 4e716c226c912234aa861f51a91f1362, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 816049613851605350, guid: 4e716c226c912234aa861f51a91f1362, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 816049613851605350, guid: 4e716c226c912234aa861f51a91f1362, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 816049613851605350, guid: 4e716c226c912234aa861f51a91f1362, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10075,8 +10075,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149578987547}
   m_LocalRotation: {x: 0, y: -0.6350676, z: 0, w: 0.77245665}
-  m_LocalPosition: {x: 36.4, y: -2.13, z: 3.307}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalPosition: {x: 36.4, y: -2.13, z: 3.226}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 5094988295622185659}
   - {fileID: 4865064391729034405}
