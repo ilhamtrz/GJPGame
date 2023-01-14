@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amountToPool: 5
-  targetPrefab: {fileID: 374418031714168392, guid: df24ee9311f77df4e9ffd6d89d32ede0, type: 3}
+  crowPrefab: {fileID: 374418031714168392, guid: df24ee9311f77df4e9ffd6d89d32ede0, type: 3}
 --- !u!4 &304678013
 Transform:
   m_ObjectHideFlags: 0
@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 787124714}
   - component: {fileID: 787124716}
   - component: {fileID: 787124715}
+  - component: {fileID: 787124717}
   m_Layer: 5
   m_Name: Reticle
   m_TagString: Untagged
@@ -733,6 +734,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787124713}
   m_CullTransparentMesh: 1
+--- !u!114 &787124717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787124713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be53361e439b7584da69d49d552e59f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
 --- !u!1 &787936340
 GameObject:
   m_ObjectHideFlags: 0
