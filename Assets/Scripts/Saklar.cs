@@ -7,6 +7,7 @@ public class Saklar : MonoBehaviour
     
     public GameObject Saklar1, Saklar2, Saklar3, Saklar4, Saklar5, Saklar6, Saklar7, Saklar8, Saklar9, Saklar10, Saklar11, Saklar12;
     public GameObject Font, Urgent;
+    public GameObject Portal1, Portal2;
     void Start()
     {
         Saklar1.SetActive(false);
@@ -21,6 +22,9 @@ public class Saklar : MonoBehaviour
         Saklar10.SetActive(false);
         Saklar11.SetActive(false);
         Saklar12.SetActive(false);
+
+        Portal1.SetActive(false);
+        Portal2.SetActive(false);
     }
 
     // Update is called once per frame
@@ -48,6 +52,9 @@ public class Saklar : MonoBehaviour
                 Saklar11.SetActive(true);
                 Saklar12.SetActive(true);
 
+                Portal1.SetActive(true);
+                Portal2.SetActive(true);
+
                 Font.SetActive(false);
                 Urgent.SetActive(false);
             }
@@ -72,6 +79,9 @@ public class Saklar : MonoBehaviour
                 Saklar10.SetActive(true);
                 Saklar11.SetActive(true);
                 Saklar12.SetActive(true);
+
+                Portal1.SetActive(true);
+                Portal2.SetActive(true);
 
                 Font.SetActive(false);
                 Urgent.SetActive(false);
