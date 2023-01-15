@@ -9546,6 +9546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747054835}
   - component: {fileID: 1747054836}
+  - component: {fileID: 1747054837}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9602,6 +9603,36 @@ MonoBehaviour:
   - {fileID: 1643651062}
   - {fileID: 1983488163}
   - {fileID: 1146114396}
+--- !u!114 &1747054837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747054834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -63434554
+      Data2: 1099615708
+      Data3: -1497897828
+      Data4: -707420681
+    Path: event:/KarateGame/BGM_KarateGame
+  Event: 
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1777066737
 GameObject:
   m_ObjectHideFlags: 0
