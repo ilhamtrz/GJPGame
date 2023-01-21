@@ -111,6 +111,7 @@ namespace StarterAssets
 
         private bool _hasAnimator;
         public bool falsee = true;
+        public Dialogue dialog;
         private bool IsCurrentDeviceMouse
         {
             get
@@ -126,6 +127,7 @@ namespace StarterAssets
 
         private void Awake()
         {
+            
             // get a reference to our main camera
             if (_mainCamera == null)
             {
@@ -146,7 +148,7 @@ namespace StarterAssets
 #else
 			Debug.LogError( "Starter Assets package is missing dependencies. Please use Tools/Starter Assets/Reinstall Dependencies to fix it");
 #endif
-
+     
             AssignAnimationIDs();
 
             // reset our timeouts on start
@@ -161,13 +163,19 @@ namespace StarterAssets
             {
                 JumpAndGravity();
                 GroundedCheck();
+                if(dialog.yo == false)
+                {
+                    Move();
+                }
+                  
                 
-                Move();
+               
             }
-          
-        
-           
+
+
          
+
+
 
 
 
