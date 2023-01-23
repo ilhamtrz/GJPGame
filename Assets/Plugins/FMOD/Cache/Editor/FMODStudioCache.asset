@@ -80,7 +80,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 1285
+  Length: 1245
 --- !u!114 &-2644275620581555747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,10 +115,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/BGM_MainMenu
   Guid:
-    Data1: 1275201194
-    Data2: 1240776752
-    Data3: -1276336719
-    Data4: -1922951193
+    Data1: -428311462
+    Data2: 1242431267
+    Data3: 1664095874
+    Data4: -842455189
   Banks:
   - {fileID: 1988529965573097278}
   IsStream: 1
@@ -127,7 +127,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 34909
+  Length: 39452
 --- !u!114 &-900596210070773312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,12 +207,15 @@ MonoBehaviour:
   - {fileID: -7821352103133374021}
   - {fileID: 543920513592631464}
   - {fileID: -608897811109895824}
+  - {fileID: 5703640506339356606}
+  - {fileID: 4762374034928697602}
+  - {fileID: 6916988438168099138}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1988529965573097278}
   StringsBanks:
   - {fileID: 6224827004776639948}
-  cacheTime: 638093890440000000
+  cacheTime: 638100750710000000
   cacheVersion: 131601
 --- !u!114 &543920513592631464
 MonoBehaviour:
@@ -255,10 +258,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/BGM_Fairgrounds
   Guid:
-    Data1: -428311462
-    Data2: 1242431267
-    Data3: 1664095874
-    Data4: -842455189
+    Data1: 1275201194
+    Data2: 1240776752
+    Data3: -1276336719
+    Data4: -1922951193
   Banks:
   - {fileID: 1988529965573097278}
   IsStream: 1
@@ -267,7 +270,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 39452
+  Length: 34909
 --- !u!114 &1988529965573097278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,11 +286,65 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638093890440000000
+  lastModified: 638100750710000000
   FileSizes:
   - Name: Desktop
-    Value: 1928608
+    Value: 2524864
   Exists: 1
+--- !u!114 &4762374034928697602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/SFX_GetPoint
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/SFX_GetPoint
+  Guid:
+    Data1: -610220129
+    Data2: 1260702785
+    Data3: 1694753699
+    Data4: 1357282100
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 335
+--- !u!114 &5703640506339356606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Hit_Arie
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Hit_Arie
+  Guid:
+    Data1: 184215421
+    Data2: 1324023155
+    Data3: -2112086139
+    Data4: -1932315032
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 596
 --- !u!114 &6094738976909005724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,10 +387,10 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638093890440000000
+  lastModified: 638100750710000000
   FileSizes:
   - Name: Desktop
-    Value: 1188
+    Value: 1330
   Exists: 1
 --- !u!114 &6431984865474491094
 MonoBehaviour:
@@ -355,3 +412,30 @@ MonoBehaviour:
   - Name: Desktop
     Value: 766
   Exists: 1
+--- !u!114 &6916988438168099138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/BGM_ShootingGame
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/BGM_ShootingGame
+  Guid:
+    Data1: -1719929399
+    Data2: 1143746208
+    Data3: 1583706509
+    Data4: 1840813358
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42772
