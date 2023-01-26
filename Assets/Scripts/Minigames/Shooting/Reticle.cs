@@ -6,7 +6,7 @@ public class Reticle : MonoBehaviour
 {
     public float speed;
     public bool isP1;
-
+    public int totalPoint;
 
     // Update is called once per frame
     void Update()
@@ -67,10 +67,12 @@ public class Reticle : MonoBehaviour
             if(target != null)
             {
                 target.Die();
+                totalPoint += target.point;
             }
             if(crow != null)
             {
                 crow.Die();
+                totalPoint -= crow.point;
             }
         }
         

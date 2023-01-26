@@ -6,6 +6,7 @@ public class TargetMover : MonoBehaviour
 {
     public float speed;
     public bool leftDirection;
+    public int point = 1;
 
     private void OnCollisionEnter(Collision collision)
     {

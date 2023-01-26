@@ -6,6 +6,7 @@ public class Crow : MonoBehaviour
 {
     public float speed;
     public bool leftDirection;
+    public int point = -1;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("TargetBorder"))
