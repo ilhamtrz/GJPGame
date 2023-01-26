@@ -13,7 +13,7 @@ public class TargetMover : MonoBehaviour
         {
             /*Destroy(gameObject);*/
             gameObject.SetActive(false);
-            Debug.Log("Collide with border");
+            
         }
     }
 
@@ -29,5 +29,10 @@ public class TargetMover : MonoBehaviour
         {
             gameObject.transform.position += new Vector3(speed, 0f, 0f);
         }
+    }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
     }
 }

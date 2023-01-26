@@ -10,6 +10,7 @@ TagManager:
   - EXIT
   - TargetBorder
   - Target
+  - Crow
   layers:
   - Default
   - TransparentFX

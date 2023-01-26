@@ -12,7 +12,7 @@ public class Crow : MonoBehaviour
         {
             /*Destroy(gameObject);*/
             gameObject.SetActive(false);
-            Debug.Log("collide with border");
+            
         }
     }
 
@@ -28,5 +28,10 @@ public class Crow : MonoBehaviour
         {
             gameObject.transform.position += new Vector3(speed, 0f, 0f);
         }
+    }
+
+    public void Die()
+    {
+        gameObject.SetActive(false);
     }
 }

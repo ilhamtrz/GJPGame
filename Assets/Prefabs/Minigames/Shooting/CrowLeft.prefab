@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -331404343595367493}
   m_Layer: 0
   m_Name: CrowLeft
-  m_TagString: Untagged
+  m_TagString: Crow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

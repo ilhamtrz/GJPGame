@@ -49,5 +49,30 @@ public class Reticle : MonoBehaviour
                 gameObject.transform.position -= new Vector3(0f, speed, 0f);
             }
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        if(Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit))
+        {
+            Debug.Log(hit.transform.tag);
+
+            TargetMover target = hit.transform.GetComponent<TargetMover>();
+            Crow crow = hit.transform.GetComponent<Crow>();
+            if(target != null)
+            {
+                target.Die();
+            }
+            if(crow != null)
+            {
+                crow.Die();
+            }
+        }
+        
     }
 }
