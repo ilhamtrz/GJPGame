@@ -8,6 +8,16 @@ public class Reticle : MonoBehaviour
     public bool isP1;
     public int totalPoint;
 
+    public int maxAmmo;
+    public int currentAmmo;
+
+    public float reloadTime;
+    private float reloadTimer;
+
+    private void Start()
+    {
+        reloadTimer = reloadTime;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -51,13 +61,26 @@ public class Reticle : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Shoot();
+            if (currentAmmo > 0)
+            {
+                Shoot();
+            }
+        }
+        if(currentAmmo <= 0)
+        {
+            reloadTimer -= 1 * Time.deltaTime;
+            if(reloadTimer <= 0)
+            {
+                Reload();
+                reloadTimer = reloadTime;
+            }
         }
     }
 
     void Shoot()
     {
         RaycastHit hit;
+        
         if(Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit))
         {
             Debug.Log(hit.transform.tag);
@@ -75,6 +98,11 @@ public class Reticle : MonoBehaviour
                 totalPoint -= crow.point;
             }
         }
-        
+        currentAmmo -= 1;
+    }
+
+    void Reload()
+    {
+        currentAmmo = maxAmmo;
     }
 }
