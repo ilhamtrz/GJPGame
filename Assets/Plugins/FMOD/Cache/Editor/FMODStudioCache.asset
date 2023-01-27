@@ -77,7 +77,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 3958888658146609114}
   MinDistance: 1
   MaxDistance: 20
   Length: 1245
@@ -215,7 +216,7 @@ MonoBehaviour:
   - {fileID: 1988529965573097278}
   StringsBanks:
   - {fileID: 6224827004776639948}
-  cacheTime: 638100750710000000
+  cacheTime: 638104065530000000
   cacheVersion: 131601
 --- !u!114 &543920513592631464
 MonoBehaviour:
@@ -286,10 +287,34 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638100750710000000
+  lastModified: 638104065530000000
   FileSizes:
   - Name: Desktop
-    Value: 2524864
+    Value: 2528224
+  Exists: 1
+--- !u!114 &3958888658146609114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gunshot/Ammo
+  m_EditorClassIdentifier: 
+  Name: Ammo
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1221354695
+    data2: 2350136645
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &4762374034928697602
 MonoBehaviour:
@@ -344,7 +369,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 596
+  Length: 657
 --- !u!114 &6094738976909005724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,10 +412,10 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638100750710000000
+  lastModified: 638104065530000000
   FileSizes:
   - Name: Desktop
-    Value: 1330
+    Value: 1376
   Exists: 1
 --- !u!114 &6431984865474491094
 MonoBehaviour:
