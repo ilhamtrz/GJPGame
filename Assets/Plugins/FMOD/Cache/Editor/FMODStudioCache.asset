@@ -27,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 40601
---- !u!114 &-5655893942342514635
+--- !u!114 &-6479450119339312256
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,24 +36,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/PhoneDial/Button Number
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/PhoneDial_2
   m_EditorClassIdentifier: 
-  Name: Button Number
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 1649957633
-    data2: 2901270749
-  Type: 2
-  IsGlobal: 0
-  Labels:
-  - 1
-  - 2
-  - 3
-  Exists: 1
+  Path: event:/PhoneGame/PhoneDial_2
+  Guid:
+    Data1: -557453377
+    Data2: 1122620869
+    Data3: -2055497033
+    Data4: -1277551263
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4542712488982049014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/PhoneDial_3
+  m_EditorClassIdentifier: 
+  Path: event:/PhoneGame/PhoneDial_3
+  Guid:
+    Data1: 309926281
+    Data2: 1292357591
+    Data3: -568894276
+    Data4: 157223198
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4456512343006975802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,34 +156,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 39452
---- !u!114 &-900596210070773312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/PhoneGame/PhoneDial
-  m_EditorClassIdentifier: 
-  Path: event:/PhoneGame/PhoneDial
-  Guid:
-    Data1: -718582837
-    Data2: 1142676524
-    Data3: -441620057
-    Data4: -665097585
-  Banks:
-  - {fileID: 1988529965573097278}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -5655893942342514635}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-608897811109895824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +201,6 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: 6094738976909005724}
   - {fileID: -4456512343006975802}
-  - {fileID: -900596210070773312}
   - {fileID: 898661454087352813}
   - {fileID: -2303058432001505324}
   - {fileID: -7821352103133374021}
@@ -211,12 +209,15 @@ MonoBehaviour:
   - {fileID: 5703640506339356606}
   - {fileID: 4762374034928697602}
   - {fileID: 6916988438168099138}
+  - {fileID: -4542712488982049014}
+  - {fileID: -6479450119339312256}
+  - {fileID: 6860474255323081677}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1988529965573097278}
   StringsBanks:
   - {fileID: 6224827004776639948}
-  cacheTime: 638104065530000000
+  cacheTime: 638104149320000000
   cacheVersion: 131601
 --- !u!114 &543920513592631464
 MonoBehaviour:
@@ -287,10 +288,10 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638104065530000000
+  lastModified: 638104149320000000
   FileSizes:
   - Name: Desktop
-    Value: 2528224
+    Value: 2529888
   Exists: 1
 --- !u!114 &3958888658146609114
 MonoBehaviour:
@@ -412,10 +413,10 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638104065530000000
+  lastModified: 638104149320000000
   FileSizes:
   - Name: Desktop
-    Value: 1376
+    Value: 1398
   Exists: 1
 --- !u!114 &6431984865474491094
 MonoBehaviour:
@@ -437,6 +438,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 766
   Exists: 1
+--- !u!114 &6860474255323081677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/PhoneDial_1
+  m_EditorClassIdentifier: 
+  Path: event:/PhoneGame/PhoneDial_1
+  Guid:
+    Data1: -718582837
+    Data2: 1142676524
+    Data3: -441620057
+    Data4: -665097585
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6916988438168099138
 MonoBehaviour:
   m_ObjectHideFlags: 0
