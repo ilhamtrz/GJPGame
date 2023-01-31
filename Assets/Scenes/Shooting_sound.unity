@@ -990,6 +990,7 @@ MonoBehaviour:
   maxAmmo: 6
   currentAmmo: 0
   reloadTime: 3
+  reloadPerAmmoTime: 0
 --- !u!1 &787936340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,7 +1320,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461271689}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -2.37}
+  m_LocalPosition: {x: 0, y: 0, z: -2.51}
   m_LocalScale: {x: 0.011276372, y: 0.011276372, z: 0.011276372}
   m_Children:
   - {fileID: 787124714}
@@ -1831,6 +1832,7 @@ MonoBehaviour:
   maxAmmo: 0
   currentAmmo: 0
   reloadTime: 0
+  reloadPerAmmoTime: 0
 --- !u!114 &1801597997
 MonoBehaviour:
   m_ObjectHideFlags: 0

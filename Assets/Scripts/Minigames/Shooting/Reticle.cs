@@ -14,9 +14,15 @@ public class Reticle : MonoBehaviour
     public float reloadTime;
     private float reloadTimer;
 
+    public float reloadPerAmmoTime;
+    private float reloadPerAmmoTimer;
+
+    private bool isReloading;
     private void Start()
     {
         reloadTimer = reloadTime;
+        reloadPerAmmoTime = reloadTime / maxAmmo;
+        reloadPerAmmoTimer = reloadPerAmmoTime;
     }
     // Update is called once per frame
     void Update()
@@ -104,5 +110,11 @@ public class Reticle : MonoBehaviour
     void Reload()
     {
         currentAmmo = maxAmmo;
+    }
+
+    void ReloadPerAmmo()
+    {
+        isReloading = true;
+        
     }
 }
