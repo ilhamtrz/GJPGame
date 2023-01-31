@@ -7,6 +7,7 @@ public class AmmoDisplay : MonoBehaviour
 {
     public TextMeshProUGUI ammoText;
     public Reticle player;
+    private string reloadingText = "Reloading";
     // Start is called before the first frame update
     void Start()
     {
@@ -16,6 +17,15 @@ public class AmmoDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ammoText.text = player.currentAmmo.ToString();
+        
+
+        if (player.currentAmmo == 0)
+        {
+            ammoText.text = reloadingText.ToString();
+        }
+        else
+        {
+            ammoText.text = player.currentAmmo.ToString();
+        }
     }
 }

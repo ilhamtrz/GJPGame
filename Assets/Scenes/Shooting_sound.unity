@@ -990,7 +990,8 @@ MonoBehaviour:
   maxAmmo: 6
   currentAmmo: 0
   reloadTime: 3
-  reloadPerAmmoTime: 0
+  reloadPerAmmoTime: 2
+  isReloading: 0
 --- !u!1 &787936340
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,6 +1834,7 @@ MonoBehaviour:
   currentAmmo: 0
   reloadTime: 0
   reloadPerAmmoTime: 0
+  isReloading: 0
 --- !u!114 &1801597997
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,12 +17,13 @@ public class Reticle : MonoBehaviour
     public float reloadPerAmmoTime;
     private float reloadPerAmmoTimer;
 
-    private bool isReloading;
+    public bool isReloading;
     private void Start()
     {
         reloadTimer = reloadTime;
-        reloadPerAmmoTime = reloadTime / maxAmmo;
         reloadPerAmmoTimer = reloadPerAmmoTime;
+        currentAmmo = maxAmmo;
+        isReloading = false;
     }
     // Update is called once per frame
     void Update()
@@ -67,7 +68,7 @@ public class Reticle : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (currentAmmo > 0)
+            if (currentAmmo > 0 && !isReloading)
             {
                 Shoot();
             }
@@ -75,11 +76,13 @@ public class Reticle : MonoBehaviour
         if(currentAmmo <= 0)
         {
             reloadTimer -= 1 * Time.deltaTime;
-            if(reloadTimer <= 0)
+            if (reloadTimer <= 0)
             {
                 Reload();
                 reloadTimer = reloadTime;
+                isReloading = false;
             }
+
         }
     }
 
@@ -109,12 +112,25 @@ public class Reticle : MonoBehaviour
 
     void Reload()
     {
+        isReloading = true;
         currentAmmo = maxAmmo;
     }
 
     void ReloadPerAmmo()
     {
         isReloading = true;
-        
+
+        for (int i = currentAmmo; i < maxAmmo; i++)
+        {
+            reloadPerAmmoTimer -= 1 * Time.deltaTime;
+            if (reloadPerAmmoTimer <= 0)
+            {
+                Debug.Log("isi ammo 1");
+                currentAmmo = currentAmmo + 1;
+                reloadPerAmmoTimer = reloadPerAmmoTime;
+            }
+            Debug.Log(i);
+        }
+        isReloading = false;
     }
 }
