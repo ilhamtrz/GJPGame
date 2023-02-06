@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-public class Dialogue : MonoBehaviour
+
+public class Dialogue_Karate : MonoBehaviour
 {
-   
     public TextMeshProUGUI textComponent;
     public string[] lines;
     public float textSpeed;
@@ -24,7 +24,7 @@ public class Dialogue : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if(textComponent.text == lines[index])
+            if (textComponent.text == lines[index])
             {
                 NextLine();
             }
@@ -35,7 +35,7 @@ public class Dialogue : MonoBehaviour
             }
         }
     }
-    
+
 
     void StartDialogue()
     {
@@ -45,7 +45,7 @@ public class Dialogue : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach(char c in lines[index].ToCharArray())
+        foreach (char c in lines[index].ToCharArray())
         {
             textComponent.text += c;
             yield return new WaitForSeconds(textSpeed);
@@ -63,14 +63,13 @@ public class Dialogue : MonoBehaviour
         else
         {
             yo = false;
-            if(yo == false)
+            if (yo == false)
             {
                 Dialog.SetActive(false);
             }
-           
+
 
         }
     }
-
-   
 }
+

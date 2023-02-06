@@ -11,6 +11,9 @@ TagManager:
   - TargetBorder
   - Target
   - Crow
+  - DialogKratae
+  - DiaglogTelephone
+  - yo
   layers:
   - Default
   - TransparentFX

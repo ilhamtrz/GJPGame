@@ -112,6 +112,8 @@ namespace StarterAssets
         private bool _hasAnimator;
         public bool falsee = true;
         public Dialogue dialog;
+        public GameObject textTriggerKarate;
+        public GameObject textTelephoneBoots;
         private bool IsCurrentDeviceMouse
         {
             get
@@ -134,7 +136,7 @@ namespace StarterAssets
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
         }
-
+        
         private void Start()
         {
             Time.timeScale = 1;
@@ -159,38 +161,57 @@ namespace StarterAssets
         private void Update()
         {
             _hasAnimator = TryGetComponent(out _animator);
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Rizzik") )
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByName("Rizzik"))
             {
                 JumpAndGravity();
                 GroundedCheck();
-                if(dialog.yo == false)
+                if (dialog.yo == false)
                 {
                     Move();
                 }
-                  
-                
-               
+
+
+
             }
-
-
-         
-
-
-
-
-
-
-
         }
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.tag == "EXIT")
             {
                 PlayerPrefs.DeleteKey("LastExitName");
                 SceneManager.LoadScene("mainmenu");
+               
+            }
+            if(other.gameObject.tag == "DialogKratae")
+            {
+                textTriggerKarate.SetActive(true);
+              
+            }
+            if (other.gameObject.tag == "yo")
+            {
+                
+                textTelephoneBoots.SetActive(true);
+            }
+
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            if(other.gameObject.tag == "DialogKratae")
+            {
+                textTriggerKarate.SetActive(false);
+               
+            }
+            if (other.gameObject.tag == "yo")
+            {
+               
+                textTelephoneBoots.SetActive(false);
             }
         }
-      
+
+
+
         private void LateUpdate()
         {
             CameraRotation();
@@ -240,7 +261,7 @@ namespace StarterAssets
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
         }
-
+        
         private void Move()
         {
             // set target speed based on move speed, sprint speed and if sprint is pressed
@@ -418,5 +439,9 @@ namespace StarterAssets
                 AudioSource.PlayClipAtPoint(LandingAudioClip, transform.TransformPoint(_controller.center), FootstepAudioVolume);
             }
         }
+
+        
     }
+
+    
 }
