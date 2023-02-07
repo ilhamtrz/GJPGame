@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Reticle : MonoBehaviour
 {
+    public ShootingGameManager gameManager;
+
     public float speed;
     public bool isP1;
     public int totalPoint;
@@ -32,65 +34,78 @@ public class Reticle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isP1)
+        if (gameManager.gameStart)
         {
-            if (Input.GetKey(KeyCode.A))
+            if (isP1)
             {
-                gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+                if (Input.GetKey(KeyCode.A))
+                {
+                    gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    gameObject.transform.position += new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    gameObject.transform.position += new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    gameObject.transform.position -= new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    if (currentAmmo > 0 && !isReloading && shootTimer <= 0)
+                    {
+
+                        Shoot();
+
+                    }
+                }
             }
-            if (Input.GetKey(KeyCode.D))
+            else
             {
-                gameObject.transform.position += new Vector3(speed, 0f, 0f);
-            }
-            if (Input.GetKey(KeyCode.W))
-            {
-                gameObject.transform.position += new Vector3(0f, speed, 0f);
-            }
-            if (Input.GetKey(KeyCode.S))
-            {
-                gameObject.transform.position -= new Vector3(0f, speed, 0f);
-            }
-        }
-        else
-        {
-            if (Input.GetKey(KeyCode.LeftArrow))
-            {
-                gameObject.transform.position -= new Vector3(speed, 0f, 0f);
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                gameObject.transform.position += new Vector3(speed, 0f, 0f);
-            }
-            if (Input.GetKey(KeyCode.UpArrow))
-            {
-                gameObject.transform.position += new Vector3(0f, speed, 0f);
-            }
-            if (Input.GetKey(KeyCode.DownArrow))
-            {
-                gameObject.transform.position -= new Vector3(0f, speed, 0f);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (currentAmmo > 0 && !isReloading && shootTimer <= 0)
-            {
-                
-                Shoot();
-                
-            }
-        }
-        if(currentAmmo <= 0)
-        {
-            reloadTimer -= 1 * Time.deltaTime;
-            if (reloadTimer <= 0)
-            {
-                Reload();
-                reloadTimer = reloadTime;
-                isReloading = false;
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    gameObject.transform.position += new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    gameObject.transform.position += new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    gameObject.transform.position -= new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKeyDown(KeyCode.L))
+                {
+                    if (currentAmmo > 0 && !isReloading && shootTimer <= 0)
+                    {
+
+                        Shoot();
+
+                    }
+                }
             }
 
+            if (currentAmmo <= 0)
+            {
+                reloadTimer -= 1 * Time.deltaTime;
+                if (reloadTimer <= 0)
+                {
+                    Reload();
+                    reloadTimer = reloadTime;
+                    isReloading = false;
+                }
+
+            }
+            shootTimer -= 1 * Time.deltaTime;
         }
-        shootTimer -= 1 * Time.deltaTime;
     }
 
     void Shoot()

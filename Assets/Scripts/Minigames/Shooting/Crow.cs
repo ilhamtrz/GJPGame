@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Crow : MonoBehaviour
 {
+    public ShootingGameManager gameManager;
     public float speed;
     public bool leftDirection;
     public int point = -1;
@@ -21,13 +22,16 @@ public class Crow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (leftDirection)
+        if (gameManager.gameStart)
         {
-            gameObject.transform.position -= new Vector3(speed, 0f, 0f);
-        }
-        else
-        {
-            gameObject.transform.position += new Vector3(speed, 0f, 0f);
+            if (leftDirection)
+            {
+                gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+            }
+            else
+            {
+                gameObject.transform.position += new Vector3(speed, 0f, 0f);
+            }
         }
     }
 

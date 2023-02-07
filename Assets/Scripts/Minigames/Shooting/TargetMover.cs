@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class TargetMover : MonoBehaviour
 {
+    public ShootingGameManager gameManager;
     public float speed;
     public bool leftDirection;
     public int point = 1;
+    private Rigidbody rb;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -18,18 +20,31 @@ public class TargetMover : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (leftDirection)
+        if (gameManager.gameStart)
         {
-            gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+            if (leftDirection)
+            {
+                gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+            }
+            else
+            {
+                gameObject.transform.position += new Vector3(speed, 0f, 0f);
+            }
         }
         else
         {
-            gameObject.transform.position += new Vector3(speed, 0f, 0f);
+            speed = 0;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
         }
+
     }
 
     public void Die()
