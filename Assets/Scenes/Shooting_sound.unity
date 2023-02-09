@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: 0
-  timeDuration: 5
+  timeDuration: 60
   gameStart: 0
 --- !u!4 &412517217
 Transform:
