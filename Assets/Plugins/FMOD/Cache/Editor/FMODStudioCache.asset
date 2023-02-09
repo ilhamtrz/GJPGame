@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 40601
+--- !u!114 &-7189104021186766060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Hit_Crow
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Hit_Crow
+  Guid:
+    Data1: -532537484
+    Data2: 1121679375
+    Data3: -1996215644
+    Data4: -1781813159
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 815
 --- !u!114 &-6479450119339312256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,6 +99,33 @@ MonoBehaviour:
     Data2: 1292357591
     Data3: -568894276
     Data4: 157223198
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4516571884293841416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Reload
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Reload
+  Guid:
+    Data1: 270642391
+    Data2: 1146292158
+    Data3: -1025322353
+    Data4: 1107902797
   Banks:
   - {fileID: 1988529965573097278}
   IsStream: 0
@@ -156,6 +210,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 39452
+--- !u!114 &-746211779729374909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM_Narrative
+  m_EditorClassIdentifier: 
+  Path: event:/BGM_Narrative
+  Guid:
+    Data1: 113411906
+    Data2: 1252758877
+    Data3: 389356469
+    Data4: 1847962173
+  Banks:
+  - {fileID: 1988529965573097278}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26707
 --- !u!114 &-608897811109895824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,12 +293,15 @@ MonoBehaviour:
   - {fileID: -4542712488982049014}
   - {fileID: -6479450119339312256}
   - {fileID: 6860474255323081677}
+  - {fileID: -746211779729374909}
+  - {fileID: -7189104021186766060}
+  - {fileID: -4516571884293841416}
   EditorParameters: []
   MasterBanks:
   - {fileID: 1988529965573097278}
   StringsBanks:
   - {fileID: 6224827004776639948}
-  cacheTime: 638104149320000000
+  cacheTime: 638115270940000000
   cacheVersion: 131601
 --- !u!114 &543920513592631464
 MonoBehaviour:
@@ -288,10 +372,10 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638104149320000000
+  lastModified: 638115270940000000
   FileSizes:
   - Name: Desktop
-    Value: 2529888
+    Value: 2951616
   Exists: 1
 --- !u!114 &3958888658146609114
 MonoBehaviour:
@@ -413,10 +497,10 @@ MonoBehaviour:
   Path: ../../LongTimePark/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638104149320000000
+  lastModified: 638115270940000000
   FileSizes:
   - Name: Desktop
-    Value: 1398
+    Value: 1522
   Exists: 1
 --- !u!114 &6431984865474491094
 MonoBehaviour:
