@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
+
 public class KarateGameManager : MonoBehaviour
 {
     public int scoreP1;
@@ -134,7 +136,8 @@ public class KarateGameManager : MonoBehaviour
         int random = Random.Range(0, 3);
         ghostHitted++;
         Debug.Log("Ghost hit:" + ghostHitted);
-        punchSfxList[random].Play();
+        //punchSfxList[random].Play();
+        RuntimeManager.PlayOneShot("event:/KarateGame/Punch",GetComponent<Transform>().position);
 
     }
 

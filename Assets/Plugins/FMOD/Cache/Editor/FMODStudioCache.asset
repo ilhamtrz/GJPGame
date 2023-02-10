@@ -1,5 +1,388 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9081935577089533344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Countdown
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Countdown
+  Guid:
+    Data1: 238118629
+    Data2: 1242098554
+    Data3: -20369767
+    Data4: -367695144
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7821352103133374021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KarateGame/BGM_KarateGame
+  m_EditorClassIdentifier: 
+  Path: event:/KarateGame/BGM_KarateGame
+  Guid:
+    Data1: -63434554
+    Data2: 1099615708
+    Data3: -1497897828
+    Data4: -707420681
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40601
+--- !u!114 &-7189104021186766060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Hit_Crow
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Hit_Crow
+  Guid:
+    Data1: -532537484
+    Data2: 1121679375
+    Data3: -1996215644
+    Data4: -1781813159
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 815
+--- !u!114 &-7120821685505875841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638116588219233913
+  FileSizes:
+  - Name: 
+    Value: 1648
+  Exists: 1
+--- !u!114 &-6479450119339312256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/PhoneDial_2
+  m_EditorClassIdentifier: 
+  Path: event:/PhoneGame/PhoneDial_2
+  Guid:
+    Data1: -557453377
+    Data2: 1122620869
+    Data3: -2055497033
+    Data4: -1277551263
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4542712488982049014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/PhoneDial_3
+  m_EditorClassIdentifier: 
+  Path: event:/PhoneGame/PhoneDial_3
+  Guid:
+    Data1: 309926281
+    Data2: 1292357591
+    Data3: -568894276
+    Data4: 157223198
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4516571884293841416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Reload
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Reload
+  Guid:
+    Data1: 270642391
+    Data2: 1146292158
+    Data3: -1025322353
+    Data4: 1107902797
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4456512343006975802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Gunshot
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Gunshot
+  Guid:
+    Data1: -780425086
+    Data2: 1290305282
+    Data3: 946599318
+    Data4: -148674607
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3958888658146609114}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1245
+--- !u!114 &-2644275620581555747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../LongTimePark/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638093779150000000
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
+  Exists: 1
+--- !u!114 &-2303058432001505324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM_MainMenu
+  m_EditorClassIdentifier: 
+  Path: event:/BGM_MainMenu
+  Guid:
+    Data1: -428311462
+    Data2: 1242431267
+    Data3: 1664095874
+    Data4: -842455189
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 39452
+--- !u!114 &-1943056300985818172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/TimeUp
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/TimeUp
+  Guid:
+    Data1: 427815501
+    Data2: 1158223466
+    Data3: -1756215111
+    Data4: -1999428420
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1778032768676633274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Hit_Curtain
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Hit_Curtain
+  Guid:
+    Data1: 184067941
+    Data2: 1260050112
+    Data3: 1127611285
+    Data4: 774785963
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-746211779729374909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM_Narrative
+  m_EditorClassIdentifier: 
+  Path: event:/BGM_Narrative
+  Guid:
+    Data1: 113411906
+    Data2: 1252758877
+    Data3: 389356469
+    Data4: 1847962173
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 26707
+--- !u!114 &-608897811109895824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI_ButtonPress
+  m_EditorClassIdentifier: 
+  Path: event:/UI_ButtonPress
+  Guid:
+    Data1: 631490939
+    Data2: 1237943029
+    Data3: 1577988019
+    Data4: -57291523
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 107
+--- !u!114 &-352673822221268625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD Banks/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638116588219233913
+  FileSizes: []
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +395,266 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
+  EditorBanks:
+  - {fileID: -7120821685505875841}
+  - {fileID: -352673822221268625}
+  EditorEvents:
+  - {fileID: 6094738976909005724}
+  - {fileID: -4456512343006975802}
+  - {fileID: 898661454087352813}
+  - {fileID: -2303058432001505324}
+  - {fileID: -7821352103133374021}
+  - {fileID: 543920513592631464}
+  - {fileID: -608897811109895824}
+  - {fileID: 5703640506339356606}
+  - {fileID: 4762374034928697602}
+  - {fileID: 6916988438168099138}
+  - {fileID: -4542712488982049014}
+  - {fileID: -6479450119339312256}
+  - {fileID: 6860474255323081677}
+  - {fileID: -746211779729374909}
+  - {fileID: -7189104021186766060}
+  - {fileID: -4516571884293841416}
+  - {fileID: -1943056300985818172}
+  - {fileID: -1778032768676633274}
+  - {fileID: -9081935577089533344}
   EditorParameters: []
-  MasterBanks: []
-  StringsBanks: []
-  cacheTime: 0
+  MasterBanks:
+  - {fileID: -352673822221268625}
+  StringsBanks:
+  - {fileID: -7120821685505875841}
+  cacheTime: 638116588219233913
   cacheVersion: 131601
+--- !u!114 &543920513592631464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/BGM_PhoneGame
+  m_EditorClassIdentifier: 
+  Path: event:/PhoneGame/BGM_PhoneGame
+  Guid:
+    Data1: 1191867646
+    Data2: 1312788107
+    Data3: 738848955
+    Data4: -1545550961
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18320
+--- !u!114 &898661454087352813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM_Fairgrounds
+  m_EditorClassIdentifier: 
+  Path: event:/BGM_Fairgrounds
+  Guid:
+    Data1: 1275201194
+    Data2: 1240776752
+    Data3: -1276336719
+    Data4: -1922951193
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 34909
+--- !u!114 &3958888658146609114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Gunshot/Ammo
+  m_EditorClassIdentifier: 
+  Name: Ammo
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 1221354695
+    data2: 2350136645
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &4762374034928697602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/SFX_GetPoint
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/SFX_GetPoint
+  Guid:
+    Data1: -610220129
+    Data2: 1260702785
+    Data3: 1694753699
+    Data4: 1357282100
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 335
+--- !u!114 &5703640506339356606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/Hit_Arie
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/Hit_Arie
+  Guid:
+    Data1: 184215421
+    Data2: 1324023155
+    Data3: -2112086139
+    Data4: -1932315032
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 657
+--- !u!114 &6094738976909005724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/KarateGame/Punch
+  m_EditorClassIdentifier: 
+  Path: event:/KarateGame/Punch
+  Guid:
+    Data1: 1337160280
+    Data2: 1169302561
+    Data3: 390564279
+    Data4: -1799601923
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 468
+--- !u!114 &6431984865474491094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../LongTimePark/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638093779150000000
+  FileSizes:
+  - Name: Desktop
+    Value: 766
+  Exists: 1
+--- !u!114 &6860474255323081677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/PhoneGame/PhoneDial_1
+  m_EditorClassIdentifier: 
+  Path: event:/PhoneGame/PhoneDial_1
+  Guid:
+    Data1: -718582837
+    Data2: 1142676524
+    Data3: -441620057
+    Data4: -665097585
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6916988438168099138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ShootingGame/BGM_ShootingGame
+  m_EditorClassIdentifier: 
+  Path: event:/ShootingGame/BGM_ShootingGame
+  Guid:
+    Data1: -1719929399
+    Data2: 1143746208
+    Data3: 1583706509
+    Data4: 1840813358
+  Banks:
+  - {fileID: -352673822221268625}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42772
