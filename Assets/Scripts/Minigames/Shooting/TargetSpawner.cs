@@ -17,15 +17,18 @@ public class TargetSpawner : MonoBehaviour
         spawnTimer -= 1 * Time.deltaTime;
         if(spawnTimer <= 0)
         {
-            GameObject target = pool.GetPooledObject();
-            if (target != null)
+            if (ShootingGameManager.Instance.gameStart)
             {
-                target.transform.position = targetPosition.position;
-                target.SetActive(true);
+                GameObject target = pool.GetPooledObject();
+                if (target != null)
+                {
+                    target.transform.position = targetPosition.position;
+                    target.SetActive(true);
+                }
+                /*var newTarget = Instantiate(targetPrefab, targetPosition.position, Quaternion.identity);
+                newTarget.transform.parent = gameObject.transform;*/
+                spawnTimer = spawnDuration;
             }
-            /*var newTarget = Instantiate(targetPrefab, targetPosition.position, Quaternion.identity);
-            newTarget.transform.parent = gameObject.transform;*/
-            spawnTimer = spawnDuration;
             
         }
     }
