@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class GameplayManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        RuntimeManager.PlayOneShot("event:/BGM_Fairgrounds", GetComponent<Transform>().position);
     }
 
     // Update is called once per frame

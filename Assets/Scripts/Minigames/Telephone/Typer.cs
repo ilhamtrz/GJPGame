@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 public class Typer : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class Typer : MonoBehaviour
     public AudioSource bgm;
     public AudioSource introBgm;
 
+    FMOD.Studio.EventInstance BGM;
+
 
     public ScoreOverallSO overallSO;
 
@@ -52,6 +55,7 @@ public class Typer : MonoBehaviour
         inBetweenTimer = inBetweenDuration;
         endGameReached = false;
         isInBetween = false;
+        BGM = RuntimeManager.CreateInstance("event:/PhoneGame/BGM_PhoneGame");
     }
     public void PreviousCall()
     {
@@ -106,9 +110,11 @@ public class Typer : MonoBehaviour
 
                 panelManager.howToPlayPanel.SetActive(false);
 
-                introBgm.Stop();
+                //introBgm.Stop();
 
-                bgm.Play();
+                BGM.start();
+
+                //bgm.Play();
 
                 
             }
@@ -233,7 +239,7 @@ public class Typer : MonoBehaviour
     public void endGame()
     {
         endGameReached = true;
-        bgm.Stop();
+        BGM.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         panelManager.endGamePanel.SetActive(true);
         panelManager.player1WinsPanel.SetActive(false);
         panelManager.player2WinsPanel.SetActive(false);
