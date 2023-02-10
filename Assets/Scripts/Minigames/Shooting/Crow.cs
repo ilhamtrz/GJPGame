@@ -8,6 +8,7 @@ public class Crow : MonoBehaviour
     public float speed;
     public bool leftDirection;
     public int point = -1;
+    private Rigidbody rb;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("TargetBorder"))
@@ -16,6 +17,11 @@ public class Crow : MonoBehaviour
             gameObject.SetActive(false);
             
         }
+    }
+
+    private void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
 
@@ -32,6 +38,11 @@ public class Crow : MonoBehaviour
             {
                 gameObject.transform.position += new Vector3(speed, 0f, 0f);
             }
+        }
+        else
+        {
+            speed = 0;
+            rb.constraints = RigidbodyConstraints.FreezePosition;
         }
     }
 
