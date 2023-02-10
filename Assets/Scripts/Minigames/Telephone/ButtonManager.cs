@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using FMODUnity;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -55,52 +56,62 @@ public class ButtonManager : MonoBehaviour
     public void Dial0()
     {
         typer.keyPressed= "0";
-        dialPhone2Sfx.Play();
+        //dialPhone2Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_2", GetComponent<Transform>().position);
     }
 
     public void Dial1()
     {
         typer.keyPressed = "1";
-        dialPhone1Sfx.Play();
+        //dialPhone1Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_1", GetComponent<Transform>().position);
     }
     public void Dial2()
     {
         typer.keyPressed = "2";
-        dialPhone1Sfx.Play();
+        //dialPhone1Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_1", GetComponent<Transform>().position);
     }
     public void Dial3()
     {
         typer.keyPressed = "3";
-        dialPhone1Sfx.Play();
+        //dialPhone1Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_1", GetComponent<Transform>().position);
     }
     public void Dial4()
     {
         typer.keyPressed = "4";
-        dialPhone2Sfx.Play();
+        //dialPhone2Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_2", GetComponent<Transform>().position);
     }
     public void Dial5()
     {
         typer.keyPressed = "5";
-        dialPhone2Sfx.Play();
+        //dialPhone2Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_2", GetComponent<Transform>().position);
     }
     public void Dial6()
     {
         typer.keyPressed = "6";
-        dialPhone2Sfx.Play();
+        //dialPhone2Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_2", GetComponent<Transform>().position);
     }
     public void Dial7()
     {
         typer.keyPressed = "7";
-        dialPhone3Sfx.Play();
+        //dialPhone3Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_3", GetComponent<Transform>().position);
     }
     public void Dial8()
     {
         typer.keyPressed = "8";
-        dialPhone3Sfx.Play();
+        //dialPhone3Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_3", GetComponent<Transform>().position);
     }
     public void Dial9()
     {
         typer.keyPressed = "9";
-        dialPhone3Sfx.Play();
+        //dialPhone3Sfx.Play();
+        RuntimeManager.PlayOneShot("event:/PhoneGame/PhoneDial_3", GetComponent<Transform>().position);
     }
 }
