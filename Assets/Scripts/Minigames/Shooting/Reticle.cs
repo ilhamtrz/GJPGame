@@ -4,27 +4,157 @@ using UnityEngine;
 
 public class Reticle : MonoBehaviour
 {
+    public ShootingGameManager gameManager;
+
     public float speed;
+    public bool isP1;
+    public int totalPoint;
 
+    public int maxAmmo;
+    public int currentAmmo;
 
+    public float reloadTime;
+    private float reloadTimer;
+
+    public float reloadPerAmmoTime;
+    private float reloadPerAmmoTimer;
+
+    public float shootTime;
+    private float shootTimer;
+
+    public bool isReloading;
+    private void Start()
+    {
+        reloadTimer = reloadTime;
+        reloadPerAmmoTimer = reloadPerAmmoTime;
+        currentAmmo = maxAmmo;
+        shootTimer = 0;
+        isReloading = false;
+    }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (gameManager.gameStart)
         {
-            gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+            if (isP1)
+            {
+                if (Input.GetKey(KeyCode.A))
+                {
+                    gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    gameObject.transform.position += new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.W))
+                {
+                    gameObject.transform.position += new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKey(KeyCode.S))
+                {
+                    gameObject.transform.position -= new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    if (currentAmmo > 0 && !isReloading && shootTimer <= 0)
+                    {
+
+                        Shoot();
+
+                    }
+                }
+            }
+            else
+            {
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    gameObject.transform.position -= new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    gameObject.transform.position += new Vector3(speed, 0f, 0f);
+                }
+                if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    gameObject.transform.position += new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    gameObject.transform.position -= new Vector3(0f, speed, 0f);
+                }
+                if (Input.GetKeyDown(KeyCode.L))
+                {
+                    if (currentAmmo > 0 && !isReloading && shootTimer <= 0)
+                    {
+
+                        Shoot();
+
+                    }
+                }
+            }
+
+            if (currentAmmo <= 0)
+            {
+                reloadTimer -= 1 * Time.deltaTime;
+                if (reloadTimer <= 0)
+                {
+                    Reload();
+                    reloadTimer = reloadTime;
+                    isReloading = false;
+                }
+
+            }
+            shootTimer -= 1 * Time.deltaTime;
         }
-        if (Input.GetKeyDown(KeyCode.D))
+    }
+
+    void Shoot()
+    {
+        RaycastHit hit;
+        
+        if(Physics.Raycast(gameObject.transform.position, gameObject.transform.forward, out hit))
         {
-            gameObject.transform.position += new Vector3(speed, 0f, 0f);
+            Debug.Log(hit.transform.tag);
+
+            TargetMover target = hit.transform.GetComponent<TargetMover>();
+            Crow crow = hit.transform.GetComponent<Crow>();
+            if(target != null)
+            {
+                target.Die();
+                totalPoint += target.point;
+            }
+            if(crow != null)
+            {
+                crow.Die();
+                totalPoint -= crow.point;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.W))
+
+        currentAmmo -= 1;
+        shootTimer = shootTime;
+    }
+
+    void Reload()
+    {
+        isReloading = true;
+        currentAmmo = maxAmmo;
+    }
+
+    void ReloadPerAmmo()
+    {
+        isReloading = true;
+
+        for (int i = currentAmmo; i < maxAmmo; i++)
         {
-            gameObject.transform.position += new Vector3(0f,speed, 0f);
+            reloadPerAmmoTimer -= 1 * Time.deltaTime;
+            if (reloadPerAmmoTimer <= 0)
+            {
+                Debug.Log("isi ammo 1");
+                currentAmmo = currentAmmo + 1;
+                reloadPerAmmoTimer = reloadPerAmmoTime;
+            }
+            Debug.Log(i);
         }
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            gameObject.transform.position -= new Vector3(0f, speed, 0f);
-        }
+        isReloading = false;
     }
 }

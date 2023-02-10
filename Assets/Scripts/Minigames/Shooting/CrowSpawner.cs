@@ -6,7 +6,8 @@ public class CrowSpawner : MonoBehaviour
 {
     private float spawnTimer;
     public float spawnDuration;
-    public CrowPool pool;
+    public CrowPool poolLeft;
+    public CrowPool poolRight;
     public float yMin;
     public float yMax;
 
@@ -19,11 +20,17 @@ public class CrowSpawner : MonoBehaviour
         spawnTimer -= 1 * Time.deltaTime;
         if (spawnTimer <= 0)
         {
-            GameObject target = pool.GetPooledObject();
-            if (target != null)
+            GameObject targetLeft = poolLeft.GetPooledObject();
+            if (targetLeft != null)
             {
-                target.transform.position = new Vector3(targetPosition[Random.Range(0, targetPosition.Count)].position.x, Random.Range(yMin,yMax), targetPosition[Random.Range(0, targetPosition.Count)].position.z);
-                target.SetActive(true);
+                targetLeft.transform.position = new Vector3(targetPosition[0].position.x, Random.Range(yMin,yMax), targetPosition[0].position.z);
+                targetLeft.SetActive(true);
+            }
+            GameObject targetRight = poolRight.GetPooledObject();
+            if (targetRight != null)
+            {
+                targetRight.transform.position = new Vector3(targetPosition[1].position.x, Random.Range(yMin, yMax), targetPosition[1].position.z);
+                targetRight.SetActive(true);
             }
             /*var newTarget = Instantiate(targetPrefab, targetPosition.position, Quaternion.identity);
             newTarget.transform.parent = gameObject.transform;*/
