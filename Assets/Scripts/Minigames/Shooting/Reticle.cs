@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class Reticle : MonoBehaviour
 {
@@ -60,7 +61,7 @@ public class Reticle : MonoBehaviour
                     {
 
                         Shoot();
-
+                        RuntimeManager.PlayOneShot("event:/ShootingGame/Gunshot", GetComponent<Transform>().position);
                     }
                 }
             }
