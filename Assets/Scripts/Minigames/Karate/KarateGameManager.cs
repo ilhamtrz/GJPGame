@@ -98,7 +98,8 @@ public class KarateGameManager : MonoBehaviour
                 howToPlayPanel.SetActive(false);
                 border.SetActive(true);
 
-                bgm.Play();
+                //bgm.Play();
+                RuntimeManager.PlayOneShot("event:/KarateGame/BGM_KarateGame", GetComponent<Transform>().position);
             }
         }
         if (ghostHitted + ghostMissed == totalGhost)
@@ -151,7 +152,7 @@ public class KarateGameManager : MonoBehaviour
     public void endGame()
     {
         endGameReached = true;
-        bgm.Stop();
+        //bgm.Stop();
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
         
