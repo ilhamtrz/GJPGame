@@ -89,7 +89,7 @@ public class Reticle : MonoBehaviour
                     {
 
                         Shoot();
-
+                        RuntimeManager.PlayOneShot("event:/ShootingGame/Gunshot", GetComponent<Transform>().position);
                     }
                 }
             }
@@ -121,13 +121,16 @@ public class Reticle : MonoBehaviour
             Crow crow = hit.transform.GetComponent<Crow>();
             if(target != null)
             {
+
                 target.Die();
                 totalPoint += target.point;
+                RuntimeManager.PlayOneShot("event:/ShootingGame/Hit_Arie", GetComponent<Transform>().position);
             }
             if(crow != null)
             {
                 crow.Die();
                 totalPoint -= crow.point;
+                RuntimeManager.PlayOneShot("event:/ShootingGame/Hit_Crow", GetComponent<Transform>().position);
             }
         }
 
@@ -138,6 +141,7 @@ public class Reticle : MonoBehaviour
     void Reload()
     {
         isReloading = true;
+        RuntimeManager.PlayOneShot("event:/ShootingGame/Reload", GetComponent<Transform>().position);
         currentAmmo = maxAmmo;
     }
 
