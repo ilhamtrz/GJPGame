@@ -22,7 +22,10 @@ public class GameplayManager : MonoBehaviour
     public ScoreOverallSO overallSO;
 
     public GameObject dialogue;
+    public GameObject PausePanel;
 
+
+    public bool isPaused;
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
@@ -45,6 +48,7 @@ public class GameplayManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
         p1ScoreText.text = overallSO.p1Score.ToString();
@@ -64,12 +68,24 @@ public class GameplayManager : MonoBehaviour
             {
                 p2WinsPanel.SetActive(true);
             }
-            overallSO.switchedOn = false;
-            overallSO.playCount = 0;
-            overallSO.p1Score = 0;
-            overallSO.p2Score = 0;
-            SceneManager.LoadScene("mainmenu");
+            
+            BackToMenu();
             bgm.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!dialogue.active)
+            {
+                if (!isPaused)
+                {
+                    PausePanel.SetActive(true);
+                    Pause();
+                }
+                else
+                {
+                    Resume();
+                }
+            }
         }
         
     }
@@ -79,5 +95,27 @@ public class GameplayManager : MonoBehaviour
         overallSO.p2Score = 0;
         overallSO.switchedOn = false;
         overallSO.playCount = 0;
+    }
+    public void BackToMenu()
+    {
+        overallSO.switchedOn = false;
+        overallSO.playCount = 0;
+        overallSO.p1Score = 0;
+        overallSO.p2Score = 0;
+        SceneManager.LoadScene("mainmenu");
+        bgm.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+    }
+
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        isPaused = true;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        PausePanel.SetActive(false);
+        isPaused = false;
     }
 }
