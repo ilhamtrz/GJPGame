@@ -7,7 +7,7 @@ public class Saklar : MonoBehaviour
     
     public GameObject Saklar1, Saklar2, Saklar3, Saklar4, Saklar5, Saklar6, Saklar7, Saklar8, Saklar9, Saklar10, Saklar11, Saklar12;
     public GameObject Font, Urgent;
-    public GameObject Portal1, Portal2;
+    public GameObject Portal1, Portal2, Portal3;
     public ScoreOverallSO SO;
     private bool SwitchedOn;
     void Start()
@@ -27,6 +27,7 @@ public class Saklar : MonoBehaviour
 
         Portal1.SetActive(false);
         Portal2.SetActive(false);
+        Portal3.SetActive(false);
         if (!SO.switchedOn)
         {
             SwitchedOn = false;
@@ -50,7 +51,8 @@ public class Saklar : MonoBehaviour
 
             Portal1.SetActive(true);
             Portal2.SetActive(true);
-            
+            Portal3.SetActive(true);
+
         }
         
 
@@ -87,6 +89,7 @@ public class Saklar : MonoBehaviour
 
                 Portal1.SetActive(true);
                 Portal2.SetActive(true);
+                Portal3.SetActive(true);
 
 
                 Font.SetActive(false);
@@ -123,6 +126,7 @@ public class Saklar : MonoBehaviour
 
                 Portal1.SetActive(true);
                 Portal2.SetActive(true);
+                Portal3.SetActive(true);
 
                 Font.SetActive(false);
                 Urgent.SetActive(false);

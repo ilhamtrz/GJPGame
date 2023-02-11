@@ -1254,6 +1254,7 @@ MonoBehaviour:
   Urgent: {fileID: 331247980}
   Portal1: {fileID: 844017107}
   Portal2: {fileID: 2136086610}
+  Portal3: {fileID: 892684675}
   SO: {fileID: 11400000, guid: b57460157045bc043977e44c3411fa1d, type: 2}
 --- !u!1 &379554350
 GameObject:
