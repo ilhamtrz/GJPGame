@@ -1460,7 +1460,6 @@ MonoBehaviour:
   sceneToLoad: Karate_Minigame
   exitName: 
   UIPrompt: {fileID: 2004033793}
-  SO: {fileID: 0}
 --- !u!1 &429736160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2750,7 +2749,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Type: 2
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -5366,7 +5365,6 @@ MonoBehaviour:
   sceneToLoad: Telephone_minigame 1
   exitName: 
   UIPrompt: {fileID: 1254921301}
-  SO: {fileID: 0}
 --- !u!65 &1448704708
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7030,7 +7028,6 @@ MonoBehaviour:
   sceneToLoad: Shooting_Minigame
   exitName: 
   UIPrompt: {fileID: 1254921301}
-  SO: {fileID: 0}
 --- !u!65 &1959040850
 BoxCollider:
   m_ObjectHideFlags: 0

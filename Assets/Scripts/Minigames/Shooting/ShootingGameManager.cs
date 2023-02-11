@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ShootingGameManager : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class ShootingGameManager : MonoBehaviour
     public GameObject p1EndPanel;
     public GameObject p2EndPanel;
     public GameObject drawEndPanel;
+
+    public ScoreOverallSO overallSO;
 
     private void Awake()
     {
@@ -83,6 +86,24 @@ public class ShootingGameManager : MonoBehaviour
                 drawEndPanel.SetActive(true);
                 Time.timeScale = 0;
             }
+            
         }
+    }
+
+    public void PreviousCall()
+    {
+        if (p1.totalPoint > p2.totalPoint)
+        {
+            overallSO.p1Score++;
+        }
+        else if (p2.totalPoint > p1.totalPoint)
+        {
+            overallSO.p2Score++;
+        }
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Rizzik");
+        PlayerPrefs.SetString("LastExitName", "test1");
+
+
     }
 }
