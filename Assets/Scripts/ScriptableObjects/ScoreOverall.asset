@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1Score: 0
   p2Score: 0
+  playCount: 0
+  switchedOn: 0

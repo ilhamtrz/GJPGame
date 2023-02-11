@@ -112,8 +112,7 @@ namespace StarterAssets
         private bool _hasAnimator;
         public bool falsee = true;
         public Dialogue dialog;
-        public GameObject textTriggerKarate;
-        public GameObject textTelephoneBoots;
+        
         private bool IsCurrentDeviceMouse
         {
             get
@@ -185,13 +184,13 @@ namespace StarterAssets
             }
             if(other.gameObject.tag == "DialogKratae")
             {
-                textTriggerKarate.SetActive(true);
+               
               
             }
             if (other.gameObject.tag == "yo")
             {
                 
-                textTelephoneBoots.SetActive(true);
+                
             }
 
         }
@@ -200,13 +199,13 @@ namespace StarterAssets
         {
             if(other.gameObject.tag == "DialogKratae")
             {
-                textTriggerKarate.SetActive(false);
+                
                
             }
             if (other.gameObject.tag == "yo")
             {
                
-                textTelephoneBoots.SetActive(false);
+               
             }
         }
 

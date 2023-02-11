@@ -29,6 +29,11 @@ public class Splash : MonoBehaviour
 
     public void PindahScene()
     {
-        SceneManager.LoadScene("gameplay_uji");
+        SceneManager.LoadScene("Intro_Narrative");
+    }
+
+    public void PressButton()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/UI_ButtonPress");
     }
 }

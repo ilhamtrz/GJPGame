@@ -8,6 +8,7 @@ public class Saklar : MonoBehaviour
     public GameObject Saklar1, Saklar2, Saklar3, Saklar4, Saklar5, Saklar6, Saklar7, Saklar8, Saklar9, Saklar10, Saklar11, Saklar12;
     public GameObject Font, Urgent;
     public GameObject Portal1, Portal2;
+    public ScoreOverallSO SO;
     private bool SwitchedOn;
     void Start()
     {
@@ -26,13 +27,42 @@ public class Saklar : MonoBehaviour
 
         Portal1.SetActive(false);
         Portal2.SetActive(false);
-        SwitchedOn = false;
+        if (!SO.switchedOn)
+        {
+            SwitchedOn = false;
+            
+        }
+        else
+        {
+            SwitchedOn = true;
+            Saklar1.SetActive(true);
+            Saklar2.SetActive(true);
+            Saklar3.SetActive(true);
+            Saklar4.SetActive(true);
+            Saklar5.SetActive(true);
+            Saklar6.SetActive(true);
+            Saklar7.SetActive(true);
+            Saklar8.SetActive(true);
+            Saklar9.SetActive(true);
+            Saklar10.SetActive(true);
+            Saklar11.SetActive(true);
+            Saklar12.SetActive(true);
+
+            Portal1.SetActive(true);
+            Portal2.SetActive(true);
+            
+        }
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (SwitchedOn)
+        {
+            Urgent.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -62,6 +92,7 @@ public class Saklar : MonoBehaviour
                 Font.SetActive(false);
                 Urgent.SetActive(false);
                 SwitchedOn = true;
+                SO.switchedOn = true;
             }
         }
     }
@@ -96,6 +127,7 @@ public class Saklar : MonoBehaviour
                 Font.SetActive(false);
                 Urgent.SetActive(false);
                 SwitchedOn = true;
+                SO.switchedOn = true;
             }
         }
     }
