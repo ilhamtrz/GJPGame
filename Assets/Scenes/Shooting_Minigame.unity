@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: 0
-  timeDuration: 60
+  timeDuration: 10
   gameStart: 0
   endGame: 0
   p1: {fileID: 787124717}

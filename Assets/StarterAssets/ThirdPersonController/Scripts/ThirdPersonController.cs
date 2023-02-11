@@ -164,11 +164,8 @@ namespace StarterAssets
             {
                 JumpAndGravity();
                 GroundedCheck();
-                if (dialog.yo == false)
-                {
-                    Move();
-                }
-
+           
+                Move();
 
 
             }

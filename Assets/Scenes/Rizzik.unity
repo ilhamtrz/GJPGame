@@ -1639,7 +1639,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfae1a7cd6f1361498a397a86d37092f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastExitTime: Rizzik2
+  lastExitTime: Rizzik3
   Dialogue: {fileID: 690871654}
 --- !u!23 &429736163
 MeshRenderer:
@@ -7565,7 +7565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2071152687
 Transform:
   m_ObjectHideFlags: 0
