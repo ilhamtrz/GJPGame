@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameTimer: 0
-  timeDuration: 10
+  timeDuration: 60
   gameStart: 0
   endGame: 0
   p1: {fileID: 787124717}
@@ -3653,6 +3653,10 @@ PrefabInstance:
       value: TargetLeft
       objectReference: {fileID: 0}
     - target: {fileID: 738525872386676560, guid: ab9643c2730497e41ac3c0396f4b482e, type: 3}
+      propertyPath: speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 738525872386676560, guid: ab9643c2730497e41ac3c0396f4b482e, type: 3}
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 412517216}
@@ -3797,6 +3801,10 @@ PrefabInstance:
     - target: {fileID: 738525872386676559, guid: 19edc4e071782484f957ff47d82cecd2, type: 3}
       propertyPath: m_Name
       value: TargetRight
+      objectReference: {fileID: 0}
+    - target: {fileID: 738525872386676560, guid: 19edc4e071782484f957ff47d82cecd2, type: 3}
+      propertyPath: speed
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 738525872386676560, guid: 19edc4e071782484f957ff47d82cecd2, type: 3}
       propertyPath: gameManager
@@ -10528,7 +10536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.7294118, g: 0.36663404, b: 0.36663404, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
