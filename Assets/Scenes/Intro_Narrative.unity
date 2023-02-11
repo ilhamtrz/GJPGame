@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 33573633}
   - component: {fileID: 33573635}
   - component: {fileID: 33573634}
+  - component: {fileID: 33573636}
   m_Layer: 0
   m_Name: 0.1
   m_TagString: Untagged
@@ -200,6 +201,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 33573632}
   m_CullTransparentMesh: 1
+--- !u!114 &33573636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 33573632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 113411906
+      Data2: 1252758877
+      Data3: 389356469
+      Data4: 1847962173
+    Path: event:/BGM_Narrative
+  Event: 
+  PlayEvent: 11
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &39205666
 GameObject:
   m_ObjectHideFlags: 0
@@ -1404,8 +1435,8 @@ GameObject:
   m_Component:
   - component: {fileID: 361690706}
   - component: {fileID: 361690705}
-  - component: {fileID: 361690704}
   - component: {fileID: 361690707}
+  - component: {fileID: 361690704}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1413,14 +1444,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &361690704
-AudioListener:
+--- !u!114 &361690704
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 361690703}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
 --- !u!20 &361690705
 Camera:
   m_ObjectHideFlags: 0
@@ -3338,6 +3374,7 @@ GameObject:
   - component: {fileID: 801678364}
   - component: {fileID: 801678366}
   - component: {fileID: 801678365}
+  - component: {fileID: 801678367}
   m_Layer: 0
   m_Name: Kring
   m_TagString: Untagged
@@ -3404,6 +3441,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 801678363}
   m_CullTransparentMesh: 1
+--- !u!114 &801678367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801678363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 427815501
+      Data2: 1158223466
+      Data3: -1756215111
+      Data4: -1999428420
+    Path: event:/ShootingGame/TimeUp
+  Event: 
+  PlayEvent: 11
+  StopEvent: 12
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &817838179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3780,6 +3847,8 @@ PlayableDirector:
     value: {fileID: 550359759}
   - key: {fileID: 7122580797032375722, guid: 2cbd2af1659bdfc44b58d86588e75e77, type: 2}
     value: {fileID: 1933423946}
+  - key: {fileID: -513582978435402514, guid: 2cbd2af1659bdfc44b58d86588e75e77, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &839654560
@@ -4195,6 +4264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 901993204}
+  - component: {fileID: 901993205}
   m_Layer: 0
   m_Name: Prologue
   m_TagString: Untagged
@@ -4217,6 +4287,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &901993205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901993203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2806964405b21a147b951b8b28cfcc09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &921639139
 GameObject:
   m_ObjectHideFlags: 0
