@@ -23,11 +23,12 @@ public class KarateGameManager : MonoBehaviour
     public GameObject P1WinIcon;
     public GameObject P2WinIcon;
 
-    public AudioSource bgm;
 
     public bool startPlaying;
 
     public static KarateGameManager instance;
+
+    public FMOD.Studio.EventInstance bgm;
 
     public float totalGhost;
     public float ghostMissed;
@@ -52,6 +53,7 @@ public class KarateGameManager : MonoBehaviour
         Debug.Log(totalGhost);
 
         Cursor.visible = false;
+        bgm = RuntimeManager.CreateInstance("event:/KarateGame/BGM_KarateGame");
     }
 
     // Update is called once per frame
@@ -101,7 +103,7 @@ public class KarateGameManager : MonoBehaviour
                 border.SetActive(true);
 
                 //bgm.Play();
-                RuntimeManager.PlayOneShot("event:/KarateGame/BGM_KarateGame", GetComponent<Transform>().position);
+                bgm.start();
             }
         }
         if (ghostHitted + ghostMissed == totalGhost)
@@ -155,6 +157,7 @@ public class KarateGameManager : MonoBehaviour
     {
         endGameReached = true;
         //bgm.Stop();
+        bgm.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
         Cursor.visible = true;
