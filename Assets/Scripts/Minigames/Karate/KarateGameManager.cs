@@ -50,6 +50,8 @@ public class KarateGameManager : MonoBehaviour
         instance = this;
         totalGhost = FindObjectsOfType<GhostObject>().Length;
         Debug.Log(totalGhost);
+
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -155,6 +157,6 @@ public class KarateGameManager : MonoBehaviour
         //bgm.Stop();
         endGamePanel.SetActive(true);
         Time.timeScale = 0;
-        
+        Cursor.visible = true;
     }
 }
