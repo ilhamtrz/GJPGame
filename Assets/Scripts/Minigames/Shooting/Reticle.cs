@@ -83,7 +83,7 @@ public class Reticle : MonoBehaviour
                 {
                     gameObject.transform.position -= new Vector3(0f, speed, 0f);
                 }
-                if (Input.GetKeyDown(KeyCode.L))
+                if (Input.GetKeyDown(KeyCode.RightShift))
                 {
                     if (currentAmmo > 0 && !isReloading && shootTimer <= 0)
                     {
